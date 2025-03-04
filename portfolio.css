@@ -95,7 +95,7 @@
 }
 
 body {
-    background-color: rgb(10,10,10);
+    background-color: rgb(10, 10, 10);
     color: white;
     justify-content: center;
 
@@ -267,6 +267,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: start;
     position: relative;
 }
 
@@ -278,12 +279,17 @@ p {
     border-radius: 0.5vw;
 }
 
+table.project-table {
+
+    margin-left: 10vw
+}
+
 td.project {
     width: 20vw;
     height: 12.5vw;
-    margin: 1vw;
 
     position: relative;
+    padding: 0.2vw;
     
 }
 
