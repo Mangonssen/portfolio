@@ -1,0 +1,374 @@
+:root {
+    --primary: #FFFFFF;
+    --secondary: #505050;
+    --button: #ffffff;
+}
+
+.cursor {   
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("cursor.png");
+    height: 6px;
+    width: 5px;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 1000;
+    transition: width 0.1s, height 0.1s, border 0.1s, transform 0.1s;
+
+    box-shadow: 1px 1px 10 10px black;
+}
+
+.jump-button {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vh;
+    height: 1em;
+    width: 1em;
+    padding: 15px;
+    border: none;
+
+    cursor: none;
+
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: width 1s ease-in-out;
+
+    border: 2px solid var(--primary);    
+    /* border-radius: 15%; */
+
+    opacity: 0.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 0.5s ease-in-out 
+}
+
+.jump-button img {
+    height: 100%;
+}
+
+.jump-button:hover {
+    opacity: 1;
+}
+
+@keyframes button-hover-in {
+
+    10% {
+        background: var(--primary);
+        color: #0e1c26;
+        border: none;
+        
+    }
+    100% {
+        background: var(--button);
+        color: #0e1c26;
+        border: none;
+        transform: scale(1.1);
+        
+        border-radius: 10px;
+
+        font-weight: 500;
+    }
+}
+
+@keyframes button-hover-out {
+    0%{
+        background: var(--button);
+        color: #0e1c26;
+        border: none;
+        transform: scaleX(1.1);
+    }
+    100% {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        transform: scaleX(1);
+       
+        
+    }
+}
+
+body {
+    background-color: rgb(10,10,10);
+    color: white;
+    justify-content: center;
+
+    /* cursor: none; */
+}
+
+
+
+.main-wrapper {
+    
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    padding: 0 100px 0 100px;
+    
+}
+
+h1 {
+    font-family: "tt-travels-next", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    margin: 0;
+
+    font-size: 1.5em;
+}
+
+header {
+    width: 100%;
+    justify-content: center;
+}
+
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    
+
+    justify-content: center;
+}
+
+.nav-list li {
+    color: var(--secondary);
+}
+
+.nav-list li a {
+    
+    font-family: "space-mono", sans-serif;
+    padding: 10px;
+    color: var(--secondary);
+    text-decoration: none;
+    cursor: none;
+
+    transition: color 0.25s ease-in-out;
+
+}
+
+.nav-list li a:hover {
+    
+    color: var(--primary);
+
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    justify-content: start;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    height: 70vh;
+    width: 80vw;   
+}
+
+.name-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.name-title {
+    font-family: "tt-travels-next", sans-serif;
+    font-weight: 800;
+
+    background: var(--primary); 
+    font-size: 8em;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    margin-bottom: 0.1em;   
+}
+
+.space {
+    width: 30px;
+}
+
+.name-subtitle {
+    font-family: "space-mono", sans-serif;
+    font-weight: 200;
+    font-size: 3.5vh;
+    color: #FFFFFF;
+
+    letter-spacing: 25px;
+
+    margin-top: 0;
+}
+
+.continue-button {
+    
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Weißer Text */
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid white;
+    cursor: none;
+    overflow: hidden;
+    transition: color 0.1s ease;
+    letter-spacing: 5px;
+
+    font-family: "Bahnschrift", sans-serif;
+    font-weight: 100;
+
+    animation: button-hover-out 0.25s ease forwards;
+
+    margin-top: 50px; 
+}
+
+.continue-button:hover {
+    
+    animation: button-hover-in 0.5s ease forwards;
+    transform-origin: center;
+
+    font-weight: 400; 
+}
+
+p {
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #FFFFFF;
+
+    font-size: 1.25em;
+
+    max-width: 80ch;
+    line-height: 1.5em;
+
+    text-align: justify;
+
+
+}
+
+#about-me {
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 0.5vw;
+}
+
+td.project {
+    width: 20vw;
+    height: 12.5vw;
+    margin: 1vw;
+
+    position: relative;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+    display: flex;
+    align-items: end;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;   
+}
+
+.overlay:hover {
+    opacity: 1;
+ }
+
+ .overlay h3 {
+    font-size: 1.1em;
+ }
+
+
+
+h3.overlay-heading {
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    margin: 0;
+
+    position: relative;
+    bottom: 7.5%;
+    left: 5%;
+    transition: display 0.5s ease-in-out;
+}
+
+
+
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table.contact-table {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    height: auto;
+
+    margin-top: 15%;	
+
+    font-family: "space-mono", sans-serif;
+}
+
+a.contact-link {
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    padding: 10px;    
+    margin: 5px;
+    transition: background-color 0.25s ease-in-out;
+}
+
+
+.contact-table td {
+    display: inline-block;
+    align-items: center;
+    flex-direction: row;
+}
+
+img.contact-icon {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#loadingGif {
+    background-color: #0e1d2b;
+}
