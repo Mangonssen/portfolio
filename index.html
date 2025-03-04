@@ -3,9 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas tardes!</title>
+    <title>Marc Obst</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zsc0jdu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Lalezar&family=Murecho:wght@100..900&display=swap" rel="stylesheet">
+    
+    
 </head>
 <body>
+    <div class="main-wrapper">
+        
+        
+
+        <div class="section" id="title">
+            
+            <header>
+                <div class="nav-wrapper" id="nav">
+                        <ul class="nav-list">
+                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(1)">ABOUT ME</a></li>
+                            <li>•</li>
+                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
+                            <li>•</li>
+                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>
+                        </ul>
+                </div>
+            </header>
+
+            <div class="title-wrapper">
+                <div class="name-box">
+                    <h1 class="name-title">MARC</h1>
+                <div class="space"></div>
+                    <h1 class="name-title">OBST</h1>
+                </div>
+                <h2 class="name-subtitle">UX DESIGN</h2>
+            </div>
+            <div class="continue-wrapper">
+                <button class="continue-button" id="scroll-btn" onclick="scrollToSection(1)">
+                    GET TO KNOW ME
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="section" id="about-me">
+            <div class="introduction" id="intro">
+                <h1>Hello!</h1>
+                <p class="text">I'm Marc Obst, a User Experience Design student at Technische Hochschule Ingolstadt. </p><br>
+            </div>
+            
+        </div>
+
+        <div class="section" id="projects">
+           
+            <table class="project-table">
+                <tr>
+                    <td class="project">
+                        <img src="icons.gif" alt="Projects">
+                        <div class="overlay">
+                            <h3 class="overlay-heading">Iconsets: Nature</h3>
+                        </div>
+                    </td>
+                    <td class="project">
+                        <img src="fungames.gif" alt="Projects">
+                        <div class="overlay">
+                            <h3 class="overlay-heading">Logo Animation: FunGames</h3>
+                        </div>
+                    </td>
+                    <td class="project">
+                        <img src="mealbox.gif" alt="Projects">
+                        <div class="overlay">
+                            <h3 class="overlay-heading">UI Concept: MealBox</h3>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="project">
+                        <img src="loading.gif" id="loadingGif" alt="Projects">
+                        <div class="overlay">
+                            <h3 class="overlay-heading">Loading Animation: THI</h3>
+                        </div>
+                    </td>
+                    <td class="project">
+                        <img src="zgk-logo.png" alt="Projects">
+                        <div class="overlay">
+                            <h3 class="overlay-heading">Logo: ZGK</h3>
+                        </div>
+                    </td>
+                    <td class="project">
+                        <img src="icons.gif" alt="Projects">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="project">
+                        <img src="icons.gif" alt="Projects">
+                    </td>
+                    <td class="project">
+                        <img src="icons.gif" alt="Projects">
+                    </td>
+                    <td class="project">
+                        <img src="icons.gif" alt="Projects">
+                    </td>
+            </table>
+            
+        </div>
+        
+        <div class="section" id="contact">
+
+            <div class="contact-wrapper">
+            <h1 class="section-heading">LET'S GET IN TOUCH!</h1>
+            <table class="contact-table">
+                <tr>
+                    <td class="contact-icon">
+                        <img src="mail.png" alt="Mail" class="contact-icon">
+                    </td>
+                    <td class="contact-text">
+                        <a href="mailto:marc.obst@gmx.net" class="contact-link">marc.obst@gmx.net</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-icon">
+                        <img src="phone.png" alt="Phone" class="contact-icon">
+                    </td>
+                    <td class="contact-text">
+                        <a href="tel:+4915128989308" class="contact-link">+49 1512 8989308</a>
+                    </td>
+            </table>
+        </div>
+
+        </div>
     
+
+    </div>
+
+
+
+
+    
+
+    <div class="cursor" id="cursor">
+        <img src="cursor.png" alt="X">
+    </div>
+
+    <div class="jump-button" id="jump-button">
+        <img src="jump-button.png" alt="JUMP" id="jump-img">
+    </div>
+
+    
+    <script src="portfolio.js"></script>
 </body>
 </html>
