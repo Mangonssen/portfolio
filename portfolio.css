@@ -261,6 +261,30 @@ p {
 }
 
 #about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.photo {
+    width: 15vw;
+    height: 15vw;
+    margin-left: 5vw;
+    filter:contrast(1.5) brightness(0.8);
+
+    display: flex;
+    align-items: center;
+}
+
+#photo {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 35%;
+    opacity: 0.8;
+    margin-right: 5vw;
+    filter:contrast(0.9) brightness(1.1);
 }
 
 #projects {
