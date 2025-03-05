@@ -467,7 +467,8 @@ img.contact-icon {
         justify-items: center
     }
 
-    .jump-button:hover {
+    .jump-button {
+        display: none;
     }
 
     body {
