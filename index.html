@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>Marc Obst</title>
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://use.typekit.net/zsc0jdu.css">
@@ -22,7 +23,7 @@
             
             <header>
                 <div class="nav-wrapper" id="nav">
-                        <ul class="nav-list">
+                        <ul class="nav-list" id="nav-list">
                             <li><a href="#" onclick="event.preventDefault(); scrollToSection(1)">ABOUT ME</a></li>
                             <li>•</li>
                             <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
@@ -54,12 +55,12 @@
                 <p>
                     Hello. I am Marc.
                     <br>
-                    I'm a User Experience Design student at Technische Hochschule Ingolstadt.
+                    I'm a User Experience Design student at the Technische Hochschule Ingolstadt.
                 </p>
             </div>
             <div class="photo">
                 
-                <img id="photo" src="marc.png"><div class="photo-ol"></div></img>
+                <img id="photo" src="marc.png"></img>
             </div>
             
         </div>
@@ -67,7 +68,7 @@
         <div class="section" id="projects">
             <h1 class="section-heading">MY PROJECTS</h1>
            
-            <table class="project-table">
+            <table class="project-table" id="project-table">
                 <tr>
                     <td class="project">
                         <img src="icons.gif" alt="Projects">

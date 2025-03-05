@@ -15,6 +15,10 @@ contact 3
 
 var currSection = 0;
 
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
 
 function scrollToSection(sectionNO) {
     console.log("Scrolling to: " + sections[sectionNO]);
@@ -58,17 +62,71 @@ jmpBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+if (!isMobileDevice()) {
+
 jmpBtn.addEventListener('mouseover', function() {
     
     document.getElementById("jump-img").style.marginLeft = "50x";
     jmpBtn.innerHTML = "Jump to Top <img src='jump-button.png' alt='Jump' id='jump-img'>";
     jmpBtn.style.width = "auto";
 });
-
+ 
 jmpBtn.addEventListener('mouseout', function() {
     jmpBtn.innerHTML = "<img src='jump-button.png' alt='Jump' id='jump-img'>";
 });
 
+} else {
+
+    document.getElementById("nav-list").innerHTML = `
+    <li><a href="#" onclick="event.preventDefault(); scrollToSection(1)">ABOUT ME</a></li>
+    <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
+    <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>   
+    `
+    document.getElementById("projects").innerHTML = `
+    <div class="proj-heading-wrapper">
+    <h1 class="section-heading">MY PROJECTS</h1>
+    </div>
+    <div class="projects-wrapper">
+    <div class="mobile-proj">
+        <img src="icons.gif" alt="Projects">
+        <div class="info">
+            <h3>Iconsets: Nature</h3>
+        </div>
+    </div>
+    <div class="mobile-proj">
+        <img src="fungames.gif" alt="Projects">
+        <div class="info">
+            <h3>Logo Animation: FunGames</h3>
+        </div>
+    </div>
+    <div class="mobile-proj">
+        <img src="mealbox.gif" alt="Projects">
+        <div class="info">
+            <h3>UI Concept: MealBox</h3>
+        </div>
+    </div>
+    <div class="mobile-proj">
+        <img src="loading.gif" id="loadingGif" alt="Projects">
+        <div class="info">
+            <h3>Loading Animation: THI</h3>
+        </div>
+    </div>
+    <div class="mobile-proj">
+        <img src="zgk-logo.png" alt="Projects">
+        <div class="info">
+            <h3>Logo: ZGK</h3>
+        </div>
+    </div>
+    <div class="mobile-proj">
+        <img src="taddle.gif" alt="Projects">
+        <div class="info">
+            <h3>UI Concept: taddle</h3>
+        </div>
+    </div>
+    </div>
+    `
+
+}
 
 // Scroll down
 document.addEventListener('wheel', function(event) {
