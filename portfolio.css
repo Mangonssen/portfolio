@@ -295,21 +295,20 @@ p {
     
 }
 
-.photo {
-    width: 15vw;
-    height: 15vw;
+.photo { 
     margin-left: 5vw;
     filter:contrast(1.5) brightness(0.8);
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #photo {
     width: 20vw;
     height: 20vw;
     border-radius: 35%;
-    opacity: 0.8;
+    opacity: 0.4;
     margin-right: 5vw;
     filter:contrast(0.9) brightness(1.1);
 }
@@ -336,11 +335,11 @@ table.project-table {
 }
 
 td.project {
-    width: 20vw;
-    height: 12.5vw;
+    width: 17.5vw;
+    height: 17.5vw;
 
     position: relative;
-    padding: 0.2vw;
+    padding: 0.25vw;
     
 }
 
@@ -362,7 +361,7 @@ td.project {
  }
 
  .overlay h3 {
-    font-size: 1.1em;
+    font-size: 1em;
  }
 
 
@@ -630,7 +629,8 @@ img.contact-icon {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: #FFFFFF10 3px solid;
+        background: #FFFFFF20;
+        
     }
 
     .proj-heading-wrapper {
@@ -642,6 +642,7 @@ img.contact-icon {
         font-family: "space-mono", sans-serif;
         font-weight: 100;
         text-align: start;
+        font-size: 1em;
     }
 
 
