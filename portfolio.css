@@ -578,15 +578,20 @@ img.contact-icon {
         height: 100vh;
     }
 
+    #introH3 {
+        font-size: 1.75em;
+    }
+
     #intro {
         display:flex;
         justify-content: start;
-        align-items: center;
         width: 100%;
         height: auto;
+        outline: purple 1px solid;
+        flex-direction: column;
     }
 
-    .photo {
+    /* .photo {
         display: flex;
         width: 100%;   
         justify-content: start;
@@ -599,12 +604,12 @@ img.contact-icon {
         border-radius: 0;
         opacity: 0.3;
         border-radius: 50%;
-    }   
+    }    */
 
     p {
         display: flex;
 
-        width: 100vw;
+        
         text-align: start;
         hyphens: auto;
         
@@ -649,7 +654,7 @@ img.contact-icon {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #FFFFFF20;
+        background: #FFFFFF15;
         
     }
 
@@ -663,6 +668,7 @@ img.contact-icon {
         font-weight: 100;
         text-align: start;
         font-size: 1em;
+        padding: 5%;
     }
 
 
