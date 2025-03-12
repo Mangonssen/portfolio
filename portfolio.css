@@ -587,7 +587,7 @@ img.contact-icon {
         justify-content: start;
         width: 100%;
         height: auto;
-        outline: purple 1px solid;
+        
         flex-direction: column;
     }
 
