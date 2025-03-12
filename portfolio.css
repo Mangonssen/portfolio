@@ -271,18 +271,38 @@ header {
     font-weight: 400; 
 }
 
+h3 {
+    font-family: "space-mono", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2em;
+}
+
+p.subtext {
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    opacity: 0.5;
+    margin: 0;
+    
+}
+
 p {
     font-family: "space-mono", sans-serif;
     font-weight: 100;
     font-style: normal;
-    color: #FFFFFF;
+    
 
-    font-size: 1.25em;
+    font-size: 1.1em;
 
     max-width: 80ch;
     line-height: 1.5em;
 
     text-align: justify;
+
+
 
 
 }
