@@ -790,9 +790,18 @@ img.popup-img {
         padding: 5%;
     }
 
+    .am-title-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
 
-
-
+    #line {
+        width: 40%;
+        height: auto;
+        margin-bottom: 5%;
+    }
 
 
 

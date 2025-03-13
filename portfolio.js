@@ -154,6 +154,12 @@ jmpBtn.addEventListener('mouseout', function() {
     <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
     <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>   
     `
+    document.getElementById("am-title-wrapper").innerHTML = `
+    <img src="line.png" id="line">
+    <h1 class="section-heading" id="intro-heading">Hey there,<br> I'm Marc!
+    </h1>
+    `
+
     document.getElementById("projects").innerHTML = `
     <div class="proj-heading-wrapper">
     <h1 class="section-heading">MY PROJECTS</h1>
