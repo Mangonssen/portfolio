@@ -39,7 +39,7 @@ document.addEventListener('mousemove', function(event) {
 });
 
 //Scroll with arrow keys
-document.addEventListener('keydown', function(event) {
+document.getElementById('main-wrapper').addEventListener('keydown', function(event) {
     event.preventDefault();
     if (event.key === 'ArrowDown') {
         let nextSection = currSection + 1;
@@ -91,12 +91,47 @@ for (let i = 0; i < projects.length; i++) {
     projects[i].addEventListener('mouseover', function() {
         projectImgs[i].style.transform = 'z-index: 3';
         projectImgs[i].style.transform = 'scale(1.3)';
+        projects[i].style.borderRadius = '10px';
+        cursor.style.display = 'none';
+        projects[i].style.cursor = 'pointer';
     });
 
     projects[i].addEventListener('mouseout', function() {
         projectImgs[i].style.transform = 'z-index: 1';
         projectImgs[i].style.transform = 'scale(1)';
+        projects[i].style.borderRadius = '0px';
+        cursor.style.display = 'block';
+        projects[i].style.cursor = 'none';
     });
+
+    projects[i].addEventListener('click', function() {
+        if (i == 0) {
+            document.getElementById("icons").style.display = "flex";
+
+            document.getElementById("popup-close").addEventListener('click', function() {
+                document.getElementById("icons").style.display = "none";
+            });
+        } else if (i == 1) {
+            openNewPopup();
+        } else if (i == 2) {
+            openNewPopup();
+        } else if (i == 3) {
+            openNewPopup();
+        } else if (i == 4) {
+            openNewPopup();
+        } else if (i == 5) {
+            openNewPopup();
+        }
+    });
+}
+
+function openNewPopup() {
+    document.getElementById("new-popup").style.display = "flex";
+
+            document.getElementById("new-popup-close").addEventListener('click', function() {
+                console.log("Close button was pressed");
+                document.getElementById("new-popup").style.display = "none";
+            });
 }
 
 if (!isMobileDevice()) {
@@ -166,7 +201,7 @@ jmpBtn.addEventListener('mouseout', function() {
 }
 
 // Scroll down
-document.addEventListener('wheel', function(event) {
+document.getElementById('main-wrapper').addEventListener('wheel', function(event) {
     console.log("current section: " + currSection);
     if (event.deltaY > 0) {
         let nextSection = currSection + 1;
@@ -179,7 +214,7 @@ document.addEventListener('wheel', function(event) {
 });
 
 // Scroll up
-document.addEventListener('wheel', function(event) {
+document.getElementById('main-wrapper').addEventListener('wheel', function(event) {
     if (event.deltaY < 0) {
         let prevSection = currSection - 1;
         if (prevSection < 0) {

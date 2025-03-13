@@ -15,7 +15,7 @@
     
 </head>
 <body>
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="main-wrapper">
         
         
 
@@ -52,12 +52,16 @@
 
         <div class="section" id="about-me">
             <div class="introduction" id="intro">
-                <h3 id="introH3">Hey there, I'm Marc!
-                </h3>
+                <div class="am-title-wrapper">
+                    <h1 class="section-heading" id="intro-heading">Hey there,<br> I'm Marc!
+                    </h1>
+                    <img src="line.png" id="line">
+                </div>
                 <p class="subtext">UX Design Student</p>
                     <br>
                 <p>
-                    I'm a User Experience Design student at the Technische Hochschule of Ingolstadt. I'm passionate about creating intuitive and user-friendly designs that make people's lives easier.
+                    I'm a User Experience Design student at the Technische Hochschule of Ingolstadt. <br>
+                    I'm passionate about creating intuitive and user-friendly designs that make people's lives easier.
                 </p>
                 
             </div>
@@ -159,13 +163,44 @@
 
     <!-- Project Popups-->
 
-    <div class="popup" id="popup1">
+    <div class="popup" id="icons">
         <div class="popup-content">
-            <div class="close-wrapper">
-                <span class="close" onclick="closePopup(1)">&times;</span>
+            <div class="close-bar">
+                    <img src="close.png" class="close" id="popup-close">
             </div>
-            <h3 class="section-heading">Iconsets: Nature</h3>
-            <p class="popup-text">This project was part of a university assignment. The task was to create two distinct icon sets. I chose pixel art as my first style and created a set of 7 icons that represent different aspects of nature.</p>
+            <div class="popup-header">
+                <h1 class="section-heading">ICONSETS: NATURE</h3>
+                
+            </div>
+            <div class="popup-programs">
+                <div class="programs-wrapper">
+                    <img src="icon-ai.png" class="program-icon">
+                    <img src="icon-ase.png" class="program-icon">
+                </div>
+            </div>
+            <div class="popup-body">
+                <p class="popup-text">This project was part of a university assignment. The task was to create two distinct icon sets. I chose pixel art as my first style and created a set of 7 icons that represent different aspects of nature.</p>
+                <img src="pixel-icons.png" class="popup-img">
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="new-popup">
+        <div class="popup-content">
+            <div class="close-bar">
+                <img src="close.png" class="close" id="new-popup-close">
+            </div>
+            <div class="popup-header">
+                <h1 class="section-heading">NEW POPUP</h1>
+            </div>
+            <div class="popup-programs">
+                <div class="programs-wrapper">
+                    <img src="icon-placeholder.png" class="program-icon">
+                </div>
+            </div>
+            <div class="popup-body">
+                <p class="popup-text">This is a new popup.</p>
+                <img src="placeholder.png" class="popup-img">
+            </div>
         </div>
     </div>
 
