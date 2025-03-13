@@ -30,12 +30,33 @@ function scrollToSection(sectionNO) {
 
 //EVENT LISTENERS
 
+
+//Cursor
 document.addEventListener('mousemove', function(event) {
     const cursor = document.getElementById('cursor');
     cursor.style.left = event.clientX + 'px';
     cursor.style.top = event.clientY + 'px';
 });
 
+//Scroll with arrow keys
+document.addEventListener('keydown', function(event) {
+    event.preventDefault();
+    if (event.key === 'ArrowDown') {
+        let nextSection = currSection + 1;
+        if (nextSection >= sections.length) {
+            nextSection = sections.length - 1; // Stay at the last section
+        }
+        scrollToSection(nextSection);
+    } else if (event.key === 'ArrowUp') {
+        let prevSection = currSection - 1;
+        if (prevSection < 0) {
+            prevSection = 0; // Stay at the first section
+        }
+        scrollToSection(prevSection);
+    }
+});
+
+//Redundant gradient handling
 document.addEventListener('mouseout', function() {
     const interval = setInterval(function() {
         for (let i = 0; i < title.length; i++) {
@@ -55,12 +76,28 @@ document.addEventListener('mouseout', function() {
         
 });
 
+//Jump to top button
 const jmpBtn = document.getElementById("jump-button");
 
 jmpBtn.addEventListener('click', function() {
     console.log("Jump Button was pressed");
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const projects = document.getElementsByClassName('project');
+const projectImgs = document.getElementsByClassName('project-img');
+
+for (let i = 0; i < projects.length; i++) {
+    projects[i].addEventListener('mouseover', function() {
+        projectImgs[i].style.transform = 'z-index: 3';
+        projectImgs[i].style.transform = 'scale(1.3)';
+    });
+
+    projects[i].addEventListener('mouseout', function() {
+        projectImgs[i].style.transform = 'z-index: 1';
+        projectImgs[i].style.transform = 'scale(1)';
+    });
+}
 
 if (!isMobileDevice()) {
 
