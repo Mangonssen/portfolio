@@ -171,10 +171,13 @@ header {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-list li {
     color: var(--secondary);
+    align-items: center;
+    align-content: center;
 }
 
 .nav-list li a {
