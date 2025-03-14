@@ -1,32 +1,14 @@
+"use strict";
+
 /* COLORS */
 const primary = "#505050";
 const secondary = "#FFFFFF" ;
 
 const title = document.getElementsByClassName('name-title');
 
-const sections = ['title', 'about-me', 'projects', 'contact'];
-
-/*
-title 0
-about-me 1
-projects 2
-contact 3
-*/
-
-var currSection = 0;
-
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
-
-
-function scrollToSection(sectionNO) {
-    console.log("Scrolling to: " + sections[sectionNO]);
-    document.getElementById(sections[sectionNO]).scrollIntoView({behavior: 'smooth'});
-
-    currSection = sectionNO;
-}
-
 
 //EVENT LISTENERS
 
@@ -36,24 +18,6 @@ document.addEventListener('mousemove', function(event) {
     const cursor = document.getElementById('cursor');
     cursor.style.left = event.clientX + 'px';
     cursor.style.top = event.clientY + 'px';
-});
-
-//Scroll with arrow keys
-document.addEventListener('keydown', function(event) {
-    event.preventDefault();
-    if (event.key === 'ArrowDown') {
-        let nextSection = currSection + 1;
-        if (nextSection >= sections.length) {
-            nextSection = sections.length - 1; // Stay at the last section
-        }
-        scrollToSection(nextSection);
-    } else if (event.key === 'ArrowUp') {
-        let prevSection = currSection - 1;
-        if (prevSection < 0) {
-            prevSection = 0; // Stay at the first section
-        }
-        scrollToSection(prevSection);
-    }
 });
 
 //Redundant gradient handling
@@ -205,33 +169,3 @@ jmpBtn.addEventListener('mouseout', function() {
     `
 
 }
-
-// Scroll down
-document.getElementById('main-wrapper').addEventListener('wheel', function(event) {
-    console.log("current section: " + currSection);
-    if (event.deltaY > 0) {
-        let nextSection = currSection + 1;
-        if (nextSection >= sections.length) {
-            nextSection = sections.length - 1; // Stay at the last section
-        }
-        scrollToSection(nextSection);
-        currSection = nextSection;
-    }
-});
-
-// Scroll up
-document.getElementById('main-wrapper').addEventListener('wheel', function(event) {
-    if (event.deltaY < 0) {
-        let prevSection = currSection - 1;
-        if (prevSection < 0) {
-            prevSection = 0; // Stay at the first section
-        }
-        scrollToSection(prevSection);
-        console.log("current section: " + currSection);
-        console.log("prev section: " + prevSection);
-        currSection = prevSection;
-    }
-});
-
-
-
