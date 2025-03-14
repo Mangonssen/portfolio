@@ -39,7 +39,7 @@ document.addEventListener('mousemove', function(event) {
 });
 
 //Scroll with arrow keys
-document.getElementById('main-wrapper').addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function(event) {
     event.preventDefault();
     if (event.key === 'ArrowDown') {
         let nextSection = currSection + 1;
