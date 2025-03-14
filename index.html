@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,33 +11,33 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Lalezar&family=Murecho:wght@100..900&display=swap" rel="stylesheet">
-    
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Girassol&family=Lalezar&family=Murecho:wght@100..900&display=swap"
+        rel="stylesheet">
+
+
 </head>
+
 <body>
     <div class="main-wrapper" id="main-wrapper">
-        
-        
+        <section id="title">
 
-        <div class="section" id="title">
-            
             <header>
                 <div class="nav-wrapper" id="nav">
-                        <ul class="nav-list" id="nav-list">
-                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(1)">ABOUT ME</a></li>
-                            <li>•</li>
-                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
-                            <li>•</li>
-                            <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>
-                        </ul>
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="#" onclick="event.preventDefault(); scrollToSection(1)">ABOUT ME</a></li>
+                        <li>•</li>
+                        <li><a href="#" onclick="event.preventDefault(); scrollToSection(2)">PROJECTS</a></li>
+                        <li>•</li>
+                        <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>
+                    </ul>
                 </div>
             </header>
 
             <div class="title-wrapper">
                 <div class="name-box">
                     <h1 class="name-title">MARC</h1>
-                <div class="space"></div>
+                    <div class="space"></div>
                     <h1 class="name-title">OBST</h1>
                 </div>
                 <h2 class="name-subtitle">UX DESIGN</h2>
@@ -46,34 +47,32 @@
                     GET TO KNOW ME
                 </button>
             </div>
-        </div>
+        </section>
 
-
-
-        <div class="section" id="about-me">
+        <section id="about-me">
             <div class="introduction" id="intro">
                 <div class="am-title-wrapper" id="am-title-wrapper">
-                    <h1 class="section-heading" id="intro-heading">Hey there,<br> I'm Marc!
-                    </h1>
-                    <img src="line.png" id="line">
+                    <!-- <img src="line.png" class="line" id="line-begin"> -->
+                    <h1 class="section-heading" id="intro-heading">About Me</h1>
+                    <img src="line.png" class="line" id="line-end">
                 </div>
                 <p class="subtext">UX Design Student</p>
-                    <br>
+                <br>
                 <p>
                     I'm a User Experience Design student at the Technische Hochschule of Ingolstadt. <br>
                     I'm passionate about creating intuitive and user-friendly designs that make people's lives easier.
                 </p>
-                
+
             </div>
             <!-- <div class="photo">
                 <img id="photo" src="marc.png"></img>
             </div> -->
-            
-        </div>
 
-        <div class="section" id="projects">
+        </section>
+
+        <section id="projects">
             <h1 class="section-heading">MY PROJECTS</h1>
-           
+
             <table class="project-table" id="project-table">
                 <tr>
                     <td class="project">
@@ -117,41 +116,36 @@
                     </td>
                 </tr>
             </table>
-            
-        </div>
-        
-        <div class="section" id="contact">
+
+        </section>
+
+        <section id="contact">
 
             <div class="contact-wrapper">
-            <h1 class="section-heading">LET'S GET IN TOUCH!</h1>
-            <table class="contact-table">
-                <tr>
-                    <td class="contact-icon">
-                        <img src="mail.png" alt="Mail" class="contact-icon">
-                    </td>
-                    <td class="contact-text">
-                        <a href="mailto:marc.obst@gmx.net" class="contact-link">marc.obst@gmx.net</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="contact-icon">
-                        <img src="phone.png" alt="Phone" class="contact-icon">
-                    </td>
-                    <td class="contact-text">
-                        <a href="tel:+4915128989308" class="contact-link">+49 1512 8989308</a>
-                    </td>
-            </table>
-        </div>
+                <h1 class="section-heading">LET'S GET IN TOUCH!</h1>
+                <table class="contact-table">
+                    <tr>
+                        <td class="contact-icon">
+                            <img src="mail.png" alt="Mail" class="contact-icon">
+                        </td>
+                        <td class="contact-text">
+                            <a href="mailto:marc.obst@gmx.net" class="contact-link">marc.obst@gmx.net</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="contact-icon">
+                            <img src="phone.png" alt="Phone" class="contact-icon">
+                        </td>
+                        <td class="contact-text">
+                            <a href="tel:+4915128989308" class="contact-link">+49 1512 8989308</a>
+                        </td>
+                </table>
+            </div>
 
-        </div>
-    
+        </section>
 
     </div>
 
-
-
-
-    
 
     <div class="cursor" id="cursor">
         <img src="cursor.png" alt="X">
@@ -166,11 +160,11 @@
     <div class="popup" id="icons">
         <div class="popup-content">
             <div class="close-bar">
-                    <img src="close.png" class="close" id="popup-close">
+                <img src="close.png" class="close" id="popup-close">
             </div>
             <div class="popup-header">
-                <h1 class="section-heading">ICONSETS: NATURE</h3>
-                
+                <h1 class="section-heading">ICONSETS: NATURE</h1>
+
             </div>
             <div class="popup-programs">
                 <div class="programs-wrapper">
@@ -179,7 +173,9 @@
                 </div>
             </div>
             <div class="popup-body">
-                <p class="popup-text">This project was part of a university assignment. The task was to create two distinct icon sets. I chose pixel art as my first style and created a set of 7 icons that represent different aspects of nature.</p>
+                <p class="popup-text">This project was part of a university assignment. The task was to create two
+                    distinct icon sets. I chose pixel art as my first style and created a set of 7 icons that represent
+                    different aspects of nature.</p>
                 <img src="pixel-icons.png" class="popup-img">
             </div>
         </div>
@@ -204,7 +200,8 @@
         </div>
     </div>
 
-    
+
     <script src="portfolio.js"></script>
 </body>
+
 </html>

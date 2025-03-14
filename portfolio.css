@@ -6,6 +6,7 @@
     --rgb: linear-gradient(33deg, rgba(63, 169, 245, 1) 0%, rgba(122, 201, 67, 1) 25%, rgba(255, 147, 30, 1) 50%, rgba(255, 29, 37, 1) 75%, rgba(255, 123, 123, 1) 100%);
     --button-rgb: linear-gradient(33deg, rgba(63, 169, 245, 1) 0%, rgba(122, 201, 67, 1) 50%, rgba(255, 123, 123, 1) 100%);
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     /* scroll-snap-type: y proximity;
     scroll-margin: 45dvh; */
 }
@@ -193,7 +194,7 @@ header {
 
 }
 
-.section {
+section {
     height: 100dvh;
     display: flex;
     scroll-snap-align: center;
@@ -364,7 +365,7 @@ h1.section-heading {
     white-space: nowrap;
 }
 
-#line {
+.line {
     height: 6dvw;
     margin-left: 2.5dvw;
 }
@@ -701,7 +702,7 @@ img.popup-img {
         flex-direction: column;
     }
 
-    .section {
+    section {
         height: 100dvh;
     }
 
@@ -805,7 +806,7 @@ img.popup-img {
         align-items: start;
     }
 
-    #line {
+    .line {
         width: 40%;
         height: auto;
         margin-bottom: 5%;
