@@ -3,6 +3,7 @@
     --secondary: #7e7e7e;
     --button: #ffffff;
     --rgb: linear-gradient(33deg, rgba(63,169,245,1) 0%, rgba(122,201,67,1) 25%, rgba(255,147,30,1) 50%, rgba(255,29,37,1) 75%, rgba(255,123,123,1) 100%);
+    --button-rgb: linear-gradient(33deg, rgba(63,169,245,1) 0%, rgba(122,201,67,1) 50%, rgba(255,123,123,1) 100%);
 }
 
 .cursor {   
@@ -67,7 +68,7 @@
         
     }
     100% {
-        background: var(--rgb);
+        background: var(--button-rgb);
         color: #0e1c26;
         border: none;
         transform: scale(1.1);
