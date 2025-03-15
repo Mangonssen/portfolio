@@ -178,6 +178,7 @@ header {
     color: var(--secondary);
     align-items: center;
     align-content: center;
+    display: flex;
 }
 
 .nav-list li a {
