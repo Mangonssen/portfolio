@@ -387,7 +387,7 @@ h1.section-heading {
 }
 
 .line {
-    height: 6dvw;
+    height: 5dvw;
     margin-left: 2.5dvw;
 }
 
@@ -827,9 +827,8 @@ img.popup-img {
         align-items: start;
     }
 
-    .line {
-        width: 40%;
-        height: auto;
+    #line {
+        height: 25dvw;
         margin-bottom: 5%;
     }
 
