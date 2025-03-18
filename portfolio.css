@@ -216,7 +216,7 @@ header {
 }
 
 section {
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     scroll-snap-align: center;
     flex-direction: column;
