@@ -3,13 +3,17 @@
     --secondary: #7e7e7e;
     --button: #ffffff;
     --bg: #101012;
+    --bg-transparent: #10101260;
     --rgb: linear-gradient(33deg, rgba(63, 169, 245, 1) 0%, rgba(122, 201, 67, 1) 25%, rgba(255, 147, 30, 1) 50%, rgba(255, 29, 37, 1) 75%, rgba(255, 123, 123, 1) 100%);
+    --rgb-transparent: linear-gradient(to right, rgba(63, 169, 245, 1) 0%, rgba(122, 201, 67, 1) 25%, rgba(255, 147, 30, .75) 50%, rgba(255, 29, 37, .4) 75%, rgba(255, 123, 123, 0) 100%);
     --button-rgb: linear-gradient(33deg, rgba(63, 169, 245, 1) 0%, rgba(122, 201, 67, 1) 50%, rgba(255, 123, 123, 1) 100%);
+
+
+    --button-r: 7.5px;
+    --button-stroke: 1.5px;
 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    /* scroll-snap-type: y proximity;
-    scroll-margin: 45dvh; */
 }
 
 .cursor {
@@ -34,7 +38,7 @@
     height: 1em;
     width: 1em;
     padding: 15px;
-    border: none;
+
 
     cursor: none;
 
@@ -45,9 +49,8 @@
     letter-spacing: 5px;
     transition: width 1s ease-in-out;
 
-    border: 2px solid var(--primary);
-    /* border-radius: 15%; */
-
+    border: var(--button-stroke) solid var(--primary);
+    border-radius: var(--button-r);
     opacity: 0.5;
 
     display: flex;
@@ -67,68 +70,35 @@
 
 @keyframes button-hover-in {
 
-    10% {
-        background: rgba(255, 154, 0, 1);
-        color: #0e1c26;
-        border: none;
-
-    }
-
     100% {
         background: var(--rgb);
         color: #0e1c26;
         border: none;
-        transform: scale(1.1);
+        transform: scale(1.2);
+        border-radius: 15px;
 
-        border-radius: 10px;
 
-        font-weight: 500;
-    }
-}
-
-@keyframes button-mobile {
-
-    10% {
-        background: var(--primary);
-        color: #0e1c26;
-        border: none;
-
-    }
-
-    50% {
-
-        color: #0e1c26;
-        border: none;
-        transform: scale(1.1);
-
-        border-radius: 10px;
-
-        font-weight: 500;
-    }
-
-    100% {
-        background: var(--primary);
-        color: #0e1c26;
-        border: none;
-
+        font-weight: 50;
     }
 }
 
 @keyframes button-hover-out {
+
     0% {
         background: var(--rgb);
-        color: #0e1c26;
+        color: var(--bg);
         border: none;
-        transform: scaleX(1.1);
+        transform: scale(1.2);
+        border-radius: 50px;
+
+
+        font-weight: 500;
     }
 
     100% {
         background: transparent;
         color: white;
-        border: 2px solid white;
-        transform: scaleX(1);
-
-
+        border: var(--button-stroke) solid var(--primary);
     }
 }
 
@@ -165,6 +135,18 @@ h1 {
 header {
     width: 100%;
     justify-content: center;
+
+    background-color: var(--bg-transparent);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    z-index: 998;
+
 }
 
 
@@ -184,7 +166,7 @@ header {
 
 .nav-list li a {
     font-family: "space-mono", sans-serif;
-    padding: 10px;
+    padding: 1em 1.5em;
     color: var(--secondary);
     text-decoration: none;
     cursor: none;
@@ -199,21 +181,6 @@ header {
 
     color: var(--primary);
 
-}
-
-.nav-list li a:hover svg {
-    fill: var(--primary);
-}
-
-#github {
-    fill: var(--secondary);
-    margin-left: 10px;
-    transform: translateY(-7.5%);
-    transition: fill 0.25s ease-in-out;
-}
-
-#github-link:hover #github {
-    fill: var(--primary);
 }
 
 section {
@@ -250,73 +217,71 @@ section {
     font-weight: 800;
 
     background: var(--primary);
-    font-size: 7em;
+    font-size: 6em;
     background-clip: text;
     color: transparent;
     margin: 0;
-    margin-bottom: 0.1em;
-}
 
-.space {
-    margin: 0 0.5em 0 0.5em;
-    width: 2dvw;
-    border-radius: 50px;
+    white-space: nowrap;
 }
 
 .title-rgb {
     position: relative;
-    background: var(--rgb);
-    height: 55%;
+    background: var(--rgb-transparent);
+    height: 60%;
     aspect-ratio: 3.5/1;
-    margin-left: 2dvw;
-    margin-bottom: 3%;
+    margin-left: 3dvw;
+
+    border-radius: 5px;
+
+    transform: translateY(-10%);
 }
-
-
 
 .name-subtitle {
     font-family: "space-mono", sans-serif;
     font-weight: 200;
-    font-size: 3.5dvh;
-    color: #FFFFFF;
+    font-size: 1.6dvw;
+    color: var(--secondary);
 
-    letter-spacing: 25px;
+    letter-spacing: 15px;
 
     margin-top: 0;
 }
 
+.continue-wrapper {
+    margin-top: 3em;
+}
+
 .continue-button {
 
-    padding: 15px 20px;
-    font-size: 18px;
+    padding: .9em 2em;
+    font-size: 1em;
     font-weight: bold;
     color: white;
     /* Weißer Text */
     text-transform: uppercase;
-    background: transparent;
-    border: 2px solid white;
+    background: var(--rgb);
     cursor: none;
     overflow: hidden;
     transition: color 0.1s ease;
-    letter-spacing: 5px;
 
-    font-family: "Bahnschrift", sans-serif;
+    font-family: "space-mono", sans-serif;
     font-weight: 100;
 
-    animation: button-hover-out 0.25s ease forwards;
+    animation: button-hover-out 0.25s ease-in-out forwards;
 
 
     text-decoration: none;
+    border-radius: var(--button-r);
 
-    margin-top: 100%;
+    background-blend-mode: multiply;
+    transition: font-weight 0.25s ease-in-out, border 0.25s ease-in-out;
 }
 
 .continue-button:hover {
 
-    animation: button-hover-in 0.5s ease forwards;
     transform-origin: center;
-
-    font-weight: 400;
+    animation: button-hover-in 0.5s ease-in-out forwards;
 }
 
 h3 {
@@ -401,6 +366,7 @@ h1.section-heading {
     font-size: 1.5em;
     margin-bottom: 5dvh;
     white-space: nowrap;
+
 }
 
 .line {
@@ -479,6 +445,20 @@ h3.overlay-heading {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    max-height: 100dvh;
+    max-width: 100dvw;
+
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    min-height: 55dvh;
+    width: 100%;
 }
 
 table.contact-table {
@@ -488,9 +468,8 @@ table.contact-table {
     align-items: center;
     height: auto;
 
-    margin-top: 15%;
-
     font-family: "space-mono", sans-serif;
+
 }
 
 a.contact-link {
@@ -514,6 +493,59 @@ img.contact-icon {
     width: 25px;
     height: auto;
     margin-right: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    min-height: 45dvh;
+    width: 100vw;
+    background: var(--bg);
+    color: var(--secondary);
+    font-family: "space-mono", sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    padding-bottom: 2%;
+
+}
+
+footer a,
+footer p {
+    color: var(--secondary);
+    text-decoration: none;
+
+    padding: 0;
+    margin: 0;
+
+    transition: text-decoration 0.25s ease-in-out;
+
+    line-height: 1em;
+
+    font-size: .8em;
+}
+
+footer #github-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+
+    transition: color 0.25s ease-in-out;
+}
+
+footer a:hover svg {
+    fill: var(--primary);
+}
+
+#github {
+    fill: var(--secondary);
+    margin-left: 0px;
+    transform: translateY(20%);
+    transition: fill 0.2s ease-in-out;
+}
+
+#github-link:hover #github {
+    fill: var(--primary);
 }
 
 #loadingGif {

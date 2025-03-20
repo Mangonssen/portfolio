@@ -10,8 +10,13 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 
+function setChecked() {
+
+}
+
 //EVENT LISTENERS
 
+const navel = document.getElementById('navel');
 
 //Cursor
 document.addEventListener('mousemove', function (event) {
@@ -98,10 +103,14 @@ if (!isMobileDevice()) {
         document.getElementById("jump-img").style.marginLeft = "50x";
         jmpBtn.innerHTML = "Jump to Top <img src='jump-button.png' alt='Jump' id='jump-img'>";
         jmpBtn.style.width = "auto";
+
+        const jumpImg = document.getElementById("jump-img");
+        jumpImg.style.marginLeft = "10px";
     });
 
     jmpBtn.addEventListener('mouseout', function () {
         jmpBtn.innerHTML = "<img src='jump-button.png' alt='Jump' id='jump-img'>";
+        jumpImg.style.marginLeft = "0px";
     });
 
 } else {
