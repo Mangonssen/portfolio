@@ -101,7 +101,7 @@ if (!isMobileDevice()) {
     jmpBtn.addEventListener('mouseover', function () {
 
         document.getElementById("jump-img").style.marginLeft = "50x";
-        jmpBtn.innerHTML = "Jump to Top <img src='jump-button.png' alt='Jump' id='jump-img'>";
+        jmpBtn.innerHTML = "Jump to Top <picture><img src='jump-button.png' alt='Jump' id='jump-img'></picture>";
         jmpBtn.style.width = "auto";
 
         const jumpImg = document.getElementById("jump-img");
@@ -109,7 +109,7 @@ if (!isMobileDevice()) {
     });
 
     jmpBtn.addEventListener('mouseout', function () {
-        jmpBtn.innerHTML = "<img src='jump-button.png' alt='Jump' id='jump-img'>";
+        jmpBtn.innerHTML = "<picture><img src='jump-button.png' alt='Jump' id='jump-img'></picture>";
         jumpImg.style.marginLeft = "0px";
     });
 
@@ -121,7 +121,7 @@ if (!isMobileDevice()) {
     <li><a href="#" onclick="event.preventDefault(); scrollToSection(3)">CONTACT</a></li>   
     `
     document.getElementById("am-title-wrapper").innerHTML = `
-    <img src="line.png" id="line">
+    <picture><img src="line.png" id="line"></picture>
     <h1 class="section-heading" id="intro-heading">Hey there,<br> I'm Marc!
     </h1>
     `
@@ -132,37 +132,37 @@ if (!isMobileDevice()) {
     </div>
     <div class="projects-wrapper">
     <div class="mobile-proj">
-        <img src="icons.gif" alt="Projects">
+        <picture><img src="icons.gif" alt="Projects"></picture>
         <div class="info">
             <h3>Iconsets: Nature</h3>
         </div>
     </div>
     <div class="mobile-proj">
-        <img src="fungames.gif" alt="Projects">
+        <picture><img src="fungames.gif" alt="Projects"></picture>
         <div class="info">
             <h3>Logo Animation: FunGames</h3>
         </div>
     </div>
     <div class="mobile-proj">
-        <img src="mealbox.gif" alt="Projects">
+        <picture><img src="mealbox.gif" alt="Projects"></picture>
         <div class="info">
             <h3>UI Concept: MealBox</h3>
         </div>
     </div>
     <div class="mobile-proj">
-        <img src="loading.gif" id="loadingGif" alt="Projects">
+        <picture><img src="loading.gif" id="loadingGif" alt="Projects"></picture>
         <div class="info">
             <h3>Loading Animation: THI</h3>
         </div>
     </div>
     <div class="mobile-proj">
-        <img src="zgk-logo.png" alt="Projects">
+        <picture><img src="zgk-logo.png" alt="Projects"></picture>
         <div class="info">
             <h3>Logo: ZGK</h3>
         </div>
     </div>
     <div class="mobile-proj">
-        <img src="taddle.gif" alt="Projects">
+        <picture><img src="taddle.gif" alt="Projects"></picture>
         <div class="info">
             <h3>UI Concept: taddle</h3>
         </div>
