@@ -20,6 +20,12 @@
     }
 }
 
+*,
+*::before,
+*::after {
+    padding: 0;
+}
+
 :root {
     --background: #1549bb;
     --primary: #FFFFFF;
@@ -159,9 +165,14 @@ section {
 
     font-family: "Degular";
 
-    line-height: 25%;
+    line-height: 80%;
 
     white-space: nowrap;
+
+    .secodary {
+        color: var(--bleak);
+        font-size: 2.8dvw;
+    }
 }
 
 .button-container {
@@ -237,7 +248,7 @@ h1 {
     white-space: nowrap;
 }
 
-h2 {
+h3 {
     color: var(--bleak);
     text-transform: uppercase;
     font-size: .8dvw;
@@ -259,6 +270,11 @@ p {
     font-size: 1.8em;
     align-items: center;
     justify-content: center;
+}
+
+#projects-container {
+    width: 80%;
+    align-items: start;
 }
 
 .projects-carousel {
@@ -385,4 +401,10 @@ footer {
     pointer-events: none;
     z-index: 1000;
     transition: width 0.1s, height 0.1s, border 0.1s, transform 0.1s;
+}
+
+#name {
+    font-family: 'Degular';
+    font-weight: 1000;
+    font-size: 1.5em;
 }
