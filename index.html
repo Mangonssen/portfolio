@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Obst UX</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/uwj8wlv.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="nav-column">
+            <div class="nav">
+                <div class="nav-logo">
+                    <p style="font-family:'Degular'; font-weight: 1000; font-size: 1.5em;">
+                        MO.
+                    </p>
+                </div>
+                <div class="spacer" id="nav-spacer"></div>
+                <div class="nav-links">
+                    <div class="nav-container">
+                        <a href="#welcome"><img class="nav-icon" src="../resources/welcome.svg"></a>
+                        <div class="context-menu">Welcome</div>
+                    </div>
+                    <div class="nav-container">
+                        <a href="#about"><img class="nav-icon" src="../resources/about.svg"></a>
+                        <div class="context-menu">About Me</div>
+                    </div>
+                    <div class="nav-container">
+                        <a href="#projects"><img class="nav-icon" src="../resources/projects.svg"></a>
+                        <div class="context-menu">Projects</div>
+                    </div>
+                    <div class="nav-container">
+                        <a href="#contact"><img class="nav-icon" src="../resources/contact.svg"></a>
+                        <div class="context-menu">Contact</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <section id="welcome">
+                <div class="welcome-title-container">
+                    <h1 style="color: var(--bleak); font-size: 2.8dvw;">Hey👋</h1>
+                    <h1>I'm Marc.</h1>
+                    <h1>I do UX.</h1>
+                </div>
+                <div class="button-container">
+                    <svg id="line">
+                        <line x1="0" y1="0" x2="0" y2="100%" stroke="var(--primary)" stroke-width="5" opacity=".4" />
+                    </svg>
+                    <a href="#about"><button>GET TO KNOW ME</button></a>
+                </div>
+            </section>
+            <section id="about">
+                <div class="about-container">
+                    <div class="about-title">
+                        <h1>About Me 🙋</h1>
+                        <h2>UX DESIGN Student</h2>
+                    </div>
+                    <div class="about-content">
+                        <div class="line"></div>
+                        <p>I'm a UX Design student at the Technische Hochschule of Ingolstadt. I'm passionate about
+                            creating
+                            intuitive and user-friendly designs that make people's lives easier.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="row-container" style=" width: 80%; align-items: start;">
+                    <div class="projects-title">
+                        <h1>My projects ✒️</h1>
+                    </div>
+                </div>
+
+
+
+            </section>
+            <section id="contact">
+                <div class="contact-container">
+                    <div class="contact-title">
+                        <h1>Let's get in touch 🤝</h1>
+                    </div>
+                    <div class="contact-content">
+                        <div class="row-container">
+                            <div class="contact-icon">
+                                <img src="../resources/mail.svg" alt="Mail">
+                            </div>
+                            <a href="mailto:mangonssen@gmx.net" class="contact-link">
+                                mangonssen@gmx.net
+                            </a>
+                        </div>
+                        <div class="row-container">
+                            <div class="contact-icon">
+                                <img src="../resources/phone.svg" alt="Phone">
+                            </div>
+                            <a href="tel:+4915128989308" class="contact-link">
+                                +49 1512 8989308
+                            </a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="cursor" id="cursor">
+        <picture>
+            <img src="../resources/cursor.svg" alt="X">
+        </picture>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
