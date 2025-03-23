@@ -278,8 +278,9 @@ p {
 
 #contact {
     font-size: 1.25em;
-    align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-container {
@@ -287,6 +288,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90dvh;
 }
 
 .contact-content {
@@ -324,6 +326,55 @@ p {
     align-items: center;
 }
 
+footer,
+footer a,
+footer p {
+
+    font-size: .8dvw;
+
+    font-family: var(--font);
+
+    color: var(--bleak);
+
+    font-weight: 300;
+    line-height: 150%;
+    text-decoration: none;
+
+    cursor: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+footer a {
+    display: flex;
+    padding: 0 .5em;
+
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover p,
+footer a:hover svg {
+    color: var(--primary);
+    fill: var(--primary);
+}
+
+footer a svg {
+    transform: translateY(-.1em);
+    padding: 0 .5em;
+    fill: var(--bleak);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 10dvh;
+
+}
+
 .cursor {
     position: fixed;
     top: 0;
@@ -334,5 +385,4 @@ p {
     pointer-events: none;
     z-index: 1000;
     transition: width 0.1s, height 0.1s, border 0.1s, transform 0.1s;
-
 }

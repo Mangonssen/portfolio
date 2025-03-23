@@ -1,4 +1,4 @@
-const navIcons = document.querySelectorAll('.nav-icon');
+const navIcons = document.getElementsByClassName('nav-icon');
 
 for (let i = 0; i < navIcons.length; i++) {
         navIcons[i].addEventListener('mouseover', function (event) {
