@@ -33,6 +33,7 @@
     --bleak: #5b8cf4;
     --bleak-transparent: #5b8cf450;
     --dark: #181818;
+    --accent: #eab644;
 
     --font: "Polymath";
 
@@ -274,7 +275,7 @@ p {
     display: flex;
     flex-direction: column;
     font-size: 1.8em;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -286,26 +287,27 @@ p {
 .carousel-container {
 
     position: relative;
-    background: cyan;
 
-    width: 100dvw;
+    width: 70dvw;
     height: 90%;
 
     margin-bottom: 1em;
 
+    border-radius: .5em;
+
     scroll-snap-type: x mandatory;
-    scroll-margin: 2ch;
+    scroll-margin: 8ch;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 
     overflow-y: hidden;
     overflow-x: scroll;
 
     display: flex;
 
-    gap: 2ch;
+    gap: 8ch;
 
-    z-index: 100;
-
+    background: rgba(from var(--dark) r g b / 0.3);
 }
 
 .project {
@@ -314,21 +316,35 @@ p {
     aspect-ratio: 1/1;
     scroll-snap-align: center;
 
+    border-radius: .5em;
+
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
 
-    /* background: linear-gradient(to bottom, #1549bb30, black 20%, black 80%, #1549bb30); */
-    background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+    background-size: cover;
+    background-position: center;
+
 }
 
-.project-mask {
-    position: fixed;
-    inset: 0;
+.project picture {
+    height: 95%;
+    aspect-ratio: 1/1;
+}
 
-    background: linear-gradient(to right, var(--background), transparent, transparent, var(--background));
+.project picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5em;
+}
+
+.dummy {
+    aspect-ratio: 0.05/1;
+    visibility: hidden;
+    scroll-snap-align: unset;
 }
 
 .video-wrapper {
