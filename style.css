@@ -24,6 +24,7 @@
 *::before,
 *::after {
     padding: 0;
+    cursor: none;
 }
 
 :root {
@@ -31,13 +32,12 @@
     --primary: #FFFFFF;
     --bleak: #5b8cf4;
     --bleak-transparent: #5b8cf450;
+    --dark: #181818;
 
     --font: "Polymath";
 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-
-    cursor: none;
 }
 
 html {
@@ -57,6 +57,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
+    z-index: 1000;
 }
 
 .nav {
@@ -103,7 +105,7 @@ body {
     margin: .3dvw .3dvw;
     padding: .5dvw .5dvw;
     opacity: .5;
-    transition: transform .3s ease-in-out background .3s ease-in-out border-radius .3s ease-in-out;
+    transition: transform .3s ease-in-out border-radius .3s ease-in-out;
 }
 
 
@@ -114,7 +116,6 @@ body {
     background: var(--bleak-transparent);
     border-radius: 20%;
 
-    cursor: none;
 }
 
 .context-menu {
@@ -161,17 +162,17 @@ section {
 
 .welcome-title-container h1 {
     color: var(--primary);
-    font-size: 3dvw;
+    font-size: 2.5dvw;
 
     font-family: "Degular";
 
-    line-height: 80%;
+    line-height: 130%;
 
     white-space: nowrap;
 
-    .secodary {
+    .secondary {
         color: var(--bleak);
-        font-size: 2.8dvw;
+        font-size: 1.5em;
     }
 }
 
@@ -201,22 +202,19 @@ a button {
     border-radius: 5dvw;
     padding: .75dvw 2dvw;
 
-    font-size: .4em;
+    font-size: .5em;
     font-family: var(--font);
     font-weight: 700;
 
     letter-spacing: .25em;
 
-    cursor: none;
-
-    transition: background 0.2s ease-in-out;
 }
 
 a button:hover {
     background: var(--primary);
     color: var(--background);
 
-    cursor: none;
+
 }
 
 #about {
@@ -241,19 +239,27 @@ a button:hover {
 
 h1 {
     color: var(--primary);
-    font-size: 2.5dvw;
+    font-size: 1.5em;
 
     font-family: "Degular";
 
     white-space: nowrap;
 }
 
+h1 div {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
 h3 {
     color: var(--bleak);
     text-transform: uppercase;
-    font-size: .8dvw;
+    font-size: .5em;
 
-    letter-spacing: .2em;
+    letter-spacing: .4em;
 
     margin-top: -3.5dvh;
 }
@@ -277,31 +283,52 @@ p {
     align-items: start;
 }
 
-.projects-carousel {
-    background: black;
+.carousel-container {
 
-    width: 80%;
+    position: relative;
+    background: cyan;
+
+    width: 100dvw;
     height: 90%;
 
     margin-bottom: 1em;
 
-    background: black;
-    border-radius: 1dvw;
-
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: x mandatory;
+    scroll-margin: 2ch;
     scroll-behavior: smooth;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    display: flex;
+
+    gap: 2ch;
+
+    z-index: 100;
+
 }
 
 .project {
+
     height: 100%;
+    aspect-ratio: 1/1;
     scroll-snap-align: center;
+
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
 
-    background: linear-gradient(to bottom, #1549bb30, black 20%, black 80%, #1549bb30);
+    /* background: linear-gradient(to bottom, #1549bb30, black 20%, black 80%, #1549bb30); */
+    background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.project-mask {
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(to right, var(--background), transparent, transparent, var(--background));
 }
 
 .video-wrapper {
@@ -318,7 +345,7 @@ p {
 
 video {
     height: 50%;
-    
+
 }
 
 .project-description {
@@ -367,7 +394,7 @@ video {
     text-decoration-thickness: .1em;
     text-underline-offset: .2em;
 
-    cursor: none;
+
 }
 
 .contact-icon {
@@ -403,7 +430,7 @@ footer p {
     line-height: 150%;
     text-decoration: none;
 
-    cursor: none;
+
 
     padding: 0;
     margin: 0;
@@ -448,6 +475,8 @@ footer {
     pointer-events: none;
     z-index: 1000;
     transition: width 0.1s, height 0.1s, border 0.1s, transform 0.1s;
+
+    filter: drop-shadow(0.1em 0.2em 0.15em rgba(from var(--dark) r g b / 0.3));
 }
 
 #name {
