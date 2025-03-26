@@ -69,7 +69,9 @@ body {
 
     padding: 1dvw;
 
-    width: 2dvw;
+    width: 3dvw;
+    height: 100vh;
+
 }
 
 .nav-container {
@@ -102,7 +104,7 @@ body {
 }
 
 .nav-icon {
-    width: 1.25dvw;
+    width: 1.75em;
     margin: .3dvw .3dvw;
     padding: .5dvw .5dvw;
     opacity: .5;
@@ -134,6 +136,7 @@ body {
     background: var(--bleak-transparent);
     border-radius: .5em;
 
+    font-size: 1.25em;
     text-decoration: none;
 
     white-space: nowrap;
@@ -141,7 +144,7 @@ body {
 }
 
 .content-container {
-    margin: 0 6dvw;
+    margin: 0 0 0 6dvw;
 
     display: flex;
     flex-direction: column;
@@ -228,11 +231,14 @@ a button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    height: 7.5dvh;
+
 }
 
 .line {
     width: 4px;
-    height: 3em;
+    height: 100%;
     opacity: .4;
     background-color: var(--primary);
     margin-right: 1.25em;
@@ -291,12 +297,12 @@ p {
     width: 70dvw;
     height: 90%;
 
-    margin-bottom: 1em;
+    align-items: center;
 
     border-radius: .5em;
 
     scroll-snap-type: x mandatory;
-    scroll-margin: 8ch;
+    /* scroll-margin: 8ch; */
     scroll-behavior: smooth;
     scrollbar-width: none;
 
@@ -307,17 +313,17 @@ p {
 
     gap: 8ch;
 
-    background: rgba(from var(--dark) r g b / 0.3);
+    /* background: rgba(from var(--dark) r g b / 0.2); */
 }
 
 .project {
 
-    height: 100%;
-    aspect-ratio: 1/1;
+    height: 95%;
     scroll-snap-align: center;
 
     border-radius: .5em;
 
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -326,61 +332,125 @@ p {
 
     background-size: cover;
     background-position: center;
-
 }
 
-.project picture {
-    height: 95%;
+.project video {
+    height: 100%;
     aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
-.project picture img {
+.project video source {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: .5em;
+    
+
+
+}
+
+.project video {
+    height: 100%;
+    aspect-ratio: 2/1;
+    border-radius: .5em;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    width: 100%;
+    aspect-ratio: 5/.1;
+
+
+    background: linear-gradient(to top, rgba(from var(--background) r g b / 0.25), transparent);
+    border-radius: .5em;
+
+    opacity: .9;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.description-container h4 {
+    color: var(--primary);
+
+    font-size: .90em;
+    font-weight: 400;
+    letter-spacing: .05em;
+
+    white-space: nowrap;
+
+    margin-left: 1em;
+
+}
+
+.info {
+    height: .75em;
+    aspect-ratio: 1/1;
+
+    background-image: url("./resources/info.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: .5em;
+
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.info:hover {
+    transform: scale(1.2);
 }
 
 .dummy {
-    aspect-ratio: 0.05/1;
     visibility: hidden;
     scroll-snap-align: unset;
 }
 
-.video-wrapper {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 90%;
-    width: 100%;
-    object-fit: cover;
-
-}
-
-video {
-    height: 50%;
-
-}
-
-.project-description {
-
-    height: 10%;
-    width: 100%;
-
+.project-nav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 70dvw;
+    margin: 1em 0 1em 0;
+
+    gap: 1em;
 }
 
-.project-description h3 {
-    font-family: var(--font);
-    font-size: .8em;
-    font-weight: 500;
-    margin-left: 1em;
+.project-nav-button {
+    aspect-ratio: 1/1;
+    height: 1.5em;
+    border-radius: .25em;
+
+    background-color: rgba(from var(--dark) r g b / 0.2);
+
+    text-align: center;
 }
 
+.project-nav-button:hover {
+    background-color: rgba(from var(--dark) r g b / 0.4);
+}
 
+.project-nav-button#left {
+    background-image: url("./resources/prev.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-nav-button#right {
+    background-image: url("./resources/next.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 #contact {
     font-size: 1.25em;
@@ -499,4 +569,27 @@ footer {
     font-family: 'Degular';
     font-weight: 1000;
     font-size: 1.5em;
+}
+
+@media (max-width: 1800px) {
+
+    .project video {
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .carousel-container, .project-nav {
+        width: 60vw;
+    }
+
+    .project, .project video {
+        height: 50dvw;
+        aspect-ratio: 1/1;
+    }
+
+    .description-container h4 {
+        font-size: .8em;
+    }
 }

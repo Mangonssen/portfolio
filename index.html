@@ -4,16 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Obst UX</title>
+    <title>Marc Obst | UX</title>
 
     <link rel="icon" href="./resources/favicon.png" type="image/icon" sizes="77x77">
     <link rel="stylesheet" href="https://use.typekit.net/uwj8wlv.css">
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -96,22 +91,37 @@
                         <h2>My projects ✒️</h2>
                     </div>
                 </div>
-                <div class="carousel-container">
+                <div class="carousel-container" id="carousel">
                     <div class="project dummy"></div>
-                    <div class="project">
-                        <picture>
-                            <img src="https://placehold.co/1000x1000" alt="Project1">
-                        </picture>
+                    <div class="project" id="loading">
+                        <video loop muted autoplay>
+                            <source src="./resources/video/icons.mp4" type="video/mp4">
+                        </video>
+                        <div class="description-container" id="icons">
+                            <h4>Iconsets: Nature</h4>
+                            <a href="./projects/icons.html" target="_blank" class="info">
+                            </a>
+                        </div>
                     </div>
-                    <div class="project">
-                        <picture>
-                            <img src="https://placehold.co/1000x1000" alt="Project1">
-                        </picture>
+                    <div class="project" id="taddle">
+                        <video loop muted autoplay>
+                            <source src="./resources/video/taddle.mp4" type="video/mp4">
+                        </video>
+                        <div class="description-container" id="loading">
+                            <h4>Screen Design: taddle</h4>
+                            <a href="./projects/taddle.html" target="_blank" class="info">
+                            </a>
+                        </div>
                     </div>
-                    <div class="project">
-                        <picture>
-                            <img src="https://placehold.co/1000x1000" alt="Project1">
-                        </picture>
+                    <div class="project" id="loading">
+                        <video loop muted autoplay>
+                            <source src="./resources/video/loading.mp4" type="video/mp4">
+                        </video>
+                        <div class="description-container" id="loading">
+                            <h4>Animation: Loading</h4>
+                            <a href="./projects/loading.html" target="_blank" class="info">
+                            </a>
+                        </div>
                     </div>
                     <div class="project">
                         <picture>
@@ -124,6 +134,10 @@
                         </picture>
                     </div>
                     <div class="project dummy"></div>
+                </div>
+                <div class="row-container project-nav">
+                    <a class="project-nav-button" onclick="scrollPrev()" id="left"></a>
+                    <a class="project-nav-button" onclick="scrollNext()" id="right"></a>
                 </div>
 
             </section>

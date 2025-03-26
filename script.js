@@ -34,3 +34,15 @@ for (let i = 0; i < links.length; i++) {
                 cursor.children[0].children[0].src = "resources/cursor.svg";
         });
 }
+
+const carousel = document.getElementById('carousel');
+
+function scrollNext() {
+        carousel.scrollLeft += 1000;
+        console.log(carousel.scrollLeft);
+}
+
+function scrollPrev() {
+        carousel.scrollLeft -= 1000;
+        console.log(carousel.scrollLeft);
+}
