@@ -36,6 +36,7 @@
     --accent: #eab644;
 
     --font: "Polymath";
+    --transition-time: 0.2s;
 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -71,6 +72,15 @@ body {
 
     width: 3dvw;
     height: 100vh;
+
+    * {
+        transition: color var(--transition-time) ease-in-out,
+            background-color var(--transition-time) ease-in-out,
+            background var(--transition-time) ease-in-out,
+            border-color var(--transition-time) ease-in-out,
+            stroke var(--transition-time) ease-in-out,
+            fill var(--transition-time) ease-in-out;
+    }
 
 }
 
@@ -111,13 +121,16 @@ body {
     transition: transform .3s ease-in-out border-radius .3s ease-in-out;
 }
 
+.nav-icon:hover,
+.active .nav-icon {
+    opacity: 1;
+    background: var(--bleak-transparent);
+    border-radius: 20%;
+}
 
 .nav-icon:hover {
 
     animation: icon-wiggle 1s infinite ease-in-out;
-    opacity: 1;
-    background: var(--bleak-transparent);
-    border-radius: 20%;
 
 }
 
@@ -345,7 +358,7 @@ p {
     width: 100%;
     object-fit: cover;
     border-radius: .5em;
-    
+
 
 
 }
@@ -400,7 +413,7 @@ p {
     margin-left: .5em;
 
     transition: transform 0.3s ease-in-out;
-    
+
 }
 
 .info:hover {
@@ -580,11 +593,13 @@ footer {
 
 @media (max-width: 900px) {
 
-    .carousel-container, .project-nav {
+    .carousel-container,
+    .project-nav {
         width: 60vw;
     }
 
-    .project, .project video {
+    .project,
+    .project video {
         height: 50dvw;
         aspect-ratio: 1/1;
     }
