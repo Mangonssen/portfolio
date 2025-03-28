@@ -139,12 +139,12 @@ body {
     position: absolute;
 
 
-    left: 3.5dvw;
+    left: 4dvw;
 
     z-index: 2;
 
     display: none;
-    margin: .4dvw 0;
+    margin: .3dvw 0;
     padding: .5dvw .7dvw;
     background: var(--bleak-transparent);
     border-radius: .5em;
