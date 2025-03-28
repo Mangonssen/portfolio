@@ -36,7 +36,7 @@
     --accent: #eab644;
 
     --font: "Polymath";
-    --transition-time: 0.2s;
+    --transition-time: 0.3s;
 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -118,7 +118,7 @@ body {
     margin: .3dvw .3dvw;
     padding: .5dvw .5dvw;
     opacity: .5;
-    transition: transform .3s ease-in-out border-radius .3s ease-in-out;
+    transition: transform var(--transition-time) ease-in-out border-radius var(--transition-time) ease-in-out;
 }
 
 .nav-icon:hover,
@@ -412,7 +412,7 @@ p {
     background-position: center;
     margin-left: .5em;
 
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--transition-time) ease-in-out;
 
 }
 
@@ -539,7 +539,7 @@ footer a {
     display: flex;
     padding: 0 .5em;
 
-    transition: color 0.2s ease-in-out;
+    transition: color var(--transition-time) ease-in-out;
 }
 
 footer a:hover p,
@@ -573,7 +573,6 @@ footer {
 
     pointer-events: none;
     z-index: 1000;
-    transition: width 0.1s, height 0.1s, border 0.1s, transform 0.1s;
 
     filter: drop-shadow(0.1em 0.2em 0.15em rgba(from var(--dark) r g b / 0.3));
 }
