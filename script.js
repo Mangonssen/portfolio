@@ -44,7 +44,7 @@ for (let i = 0; i < links.length; i++) {
 const carousel = document.getElementById('carousel');
 
 function scrollNext() {
-        carousel.scrollLeft += 1000;
+        carousel.scrollLeft += document.getElementsByClassName('project')[1].offsetWidth;
         console.log(carousel.scrollLeft);
 }
 
