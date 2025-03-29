@@ -32,8 +32,6 @@ const links = document.getElementsByTagName("a");
 
 for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('mouseover', function (event) {
-                console.log("hovered over link");
-                console.log(cursor.children[0]);
                 cursor.children[0].children[0].src = "resources/pointer.svg";
         });
         links[i].addEventListener('mouseout', function (event) {
@@ -46,11 +44,23 @@ const carousel = document.getElementById('carousel');
 function scrollNext() {
         carousel.scrollLeft += document.getElementsByClassName('project')[1].offsetWidth;
         console.log(carousel.scrollLeft);
+
+        if (curProject < projects.length) {
+                curProject++;
+        }
+        projectQuery();
+        console.log(curProject);
 }
 
 function scrollPrev() {
         carousel.scrollLeft -= 1000;
         console.log(carousel.scrollLeft);
+
+        if (curProject > 0) {
+                curProject--;
+        }
+        projectQuery();
+        console.log(curProject);
 }
 
 /**  Funktion, die überprüft, ob ein Element im Viewport ist
@@ -95,3 +105,60 @@ window.addEventListener('scroll', () => {
                 checkCurrentSection();
         }, 100); // 100ms Verzögerung, nach der der Scrollvorgang als abgeschlossen gilt
 });
+
+const projects = [
+        "icons",
+        "taddle",
+        "loading",
+        "printer"
+];
+
+var curProject = 0;
+
+//PROJECT QUERY EVENT LISTENER
+window.addEventListener('scroll', projectQuery());
+
+function projectQuery() {
+
+        const projectsSection = document.querySelector('#projects');
+        if (projectsSection && !isElementOutOffBounds(projectsSection)) {
+                let currentProject = projects[curProject];
+                const url = new URL(window.location);
+                url.searchParams.set('p', currentProject);
+                window.history.replaceState({}, '', url);
+        }
+}
+
+const infoButtons = document.getElementsByClassName('info');
+const popups = document.getElementsByClassName('popup-container');
+
+for (let i = 0; i < infoButtons.length; i++) {
+        infoButtons[i].addEventListener('click', function (event) {
+                let urlParams = new URLSearchParams(window.location.search);
+                let projectParam = urlParams.get('p');
+
+                let projectIndex = projects.indexOf(projectParam);
+                if (projectIndex !== -1) {
+                        console.log(`Project found at index: ${projectIndex}`);
+                } else {
+                        console.log('Project not found in the array.');
+                }
+
+                console.log(popups[projectIndex]);
+                popups[projectIndex].style.display = 'flex';
+        });
+}
+
+const closeButtons = document.getElementsByClassName('pu-close');
+
+for (let i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener('click', function (event) {
+                closePopup();
+        });
+}
+
+function closePopup() {
+        for (let i = 0; i < popups.length; i++) {
+                popups[i].style.display = 'none';
+        }
+}
