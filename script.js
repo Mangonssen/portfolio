@@ -85,6 +85,15 @@ function checkCurrentSection() {
                         a.classList.add('active');
                         console.log(`Aktuelle Sektion: ${section.id}`);
                         window.location = a.getAttribute("href");
+
+                        // Wenn die Sektion "projects" ist und das aktuelle Projekt 0 ist, setze den URL-Parameter auf "icons"
+                        if (section.id == "projects" && curProject == 0) {
+
+                                let url = new URL(window.location);
+                                url.searchParams.set('p', "icons");
+                                window.history.replaceState({}, '', url);
+                        }
+
                 } else {
                         // Andernfalls entferne die aktive Klasse
                         section.classList.remove('active');
@@ -122,15 +131,29 @@ function projectQuery() {
 
         const projectsSection = document.querySelector('#projects');
         if (projectsSection && !isElementOutOffBounds(projectsSection)) {
+
+                console.log("Hallo");
+
                 let currentProject = projects[curProject];
                 const url = new URL(window.location);
                 url.searchParams.set('p', currentProject);
                 window.history.replaceState({}, '', url);
+        } else {
+
         }
 }
 
 const infoButtons = document.getElementsByClassName('info');
 const popups = document.getElementsByClassName('popup-container');
+
+document.addEventListener('click', function () {
+        let isPopupVisible = Array.from(popups).some(popup => popup.style.display === 'flex');
+        if (isPopupVisible) {
+                document.body.style.overflow = 'hidden';
+        } else {
+                document.body.style.overflow = 'auto';
+        }
+});
 
 for (let i = 0; i < infoButtons.length; i++) {
         infoButtons[i].addEventListener('click', function (event) {
