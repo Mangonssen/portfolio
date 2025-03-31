@@ -550,7 +550,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90dvh;
+    height: 90%;
 }
 
 .contact-content {
