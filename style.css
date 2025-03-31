@@ -718,7 +718,7 @@ footer {
 .pu-head {
     max-width: 36ch;
     width: 100%;
-    
+
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -794,7 +794,7 @@ footer {
 .pu-body picture {
     display: inline-flex;
     justify-content: center;
-    
+
     width: 100%;
     aspect-ratio: 1/1;
 }
@@ -825,7 +825,8 @@ footer {
         margin: 0;
     }
 
-    .pu-head, .pu-programs {
+    .pu-head,
+    .pu-programs {
 
         max-width: 100%;
     }
@@ -893,7 +894,7 @@ h5 {
 
     .nav {
 
-        display: flex; 
+        display: flex;
         height: 5dvh;
         width: 100dvw;
         padding: 25px 0 25px 25px;
@@ -960,7 +961,7 @@ h5 {
     }
 
     :root {
-        font-size: clamp(32.5px, 3vw, 40px); 
+        font-size: clamp(32.5px, 3vw, 40px);
     }
 
     .about-content {
@@ -1010,14 +1011,13 @@ h5 {
         width: 100%;
     }
 
-    .project video {
-    }
+    .project video {}
 
     .project-nav {
         display: none;
     }
 
-    
+
 
 
 
