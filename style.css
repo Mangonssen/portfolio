@@ -91,7 +91,7 @@ body {
     width: 1rem;
     height: 100vh;
 
-    
+
 
     * {
         transition: color var(--transition-time) ease-in-out,
@@ -146,13 +146,13 @@ body {
     margin: .75dvh .75dvh;
     padding: 1dvh 1dvh;
     opacity: .5;
-    transition: transform var(--transition-time) ease-in-out border-radius var(--transition-time) ease-in-out;
+    transition: background-color .1s ease-in-out;
 }
 
 .nav-icon:hover,
 .active .nav-icon {
     opacity: 1;
-    background: var(--bleak-transparent);
+    background-color: var(--bleak-transparent);
     border-radius: 20%;
 }
 
@@ -572,6 +572,8 @@ a {
     text-decoration-color: var(--bleak-transparent);
     text-decoration-thickness: .1em;
     text-underline-offset: .2em;
+
+    transition: text-decoration-color .3s ease;
 }
 
 .contact-link:hover {
@@ -632,8 +634,11 @@ footer p {
 footer a {
     display: flex;
     padding: 0 .5em;
+}
 
-    transition: color var(--transition-time) ease-in-out;
+footer a p,
+footer a svg {
+    transition: color var(--transition-time) ease-in-out, fill var(--transition-time) ease-in-out;
 }
 
 footer a:hover p,
@@ -694,6 +699,8 @@ footer {
 
     background-color: #00000080;
     backdrop-filter: blur(50px);
+
+    transition: background-color 1s ease;
 
 
 }
@@ -756,7 +763,7 @@ footer {
 
 .pu-programs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     justify-content: start;
 
@@ -785,6 +792,14 @@ footer {
     border-radius: .25em;
 }
 
+hr {
+    width: 100%;
+    border: var(--white-transparent) solid 1px;
+    opacity: .25;
+
+    margin-top: 0;
+}
+
 .pu-body {
     display: flex;
     flex-direction: column;
@@ -795,6 +810,22 @@ footer {
     height: 100%;
 
     gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.popup-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
 }
 
 
@@ -816,20 +847,36 @@ footer {
     text-justify: inter-word;
     text-align: justify;
 
-    max-width: 60ch;
+    max-width: 54ch;
 
     width: 90%;
 }
 
 @media (width> 130ch) {
     .pu-body {
+        display: flex;
+        flex-direction: column;
+        
         margin-top: 1rem;
+        
+        align-items: start;
+    }
+
+    .popup-row {
         flex-direction: row;
         align-items: start;
         justify-content: space-between;
+
+        width: 100%;
+
+        gap: .25rem;
+
+        border: orange solid 1px;
+
+        flex-wrap: nowrap;
     }
 
-    .pu-body p {
+    .popup-row p {
         margin: 0;
     }
 
@@ -839,8 +886,8 @@ footer {
         max-width: 100%;
     }
 
-    .pu-body picture {
-        width: 50%;
+    .popup-row picture {
+        width: 40%;
         overflow: hidden;
     }
 }
