@@ -108,6 +108,17 @@ function percentageInBounds(el) {
         return { top: topPercentage, bottom: bottomPercentage, left: leftPercentage, right: rightPercentage };
 }
 
+function coverage(el) {
+
+        const boundsPerc = percentageInBounds(el);
+        const deltaHeight = Math.abs(boundsPerc.top - boundsPerc.bottom);
+        const deltaWidth = Math.abs(boundsPerc.left - boundsPerc.right);
+
+        const coverage = deltaHeight * deltaWidth;
+
+        return coverage;
+}
+
 // Funktion, um die aktuell sichtbare Sektion zu bestimmen
 function checkCurrentSection() {
 
