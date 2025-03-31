@@ -158,7 +158,8 @@ function checkCurrentSection() {
                         section.classList.add('active');
                         a.classList.add('active');
                         console.log(`Aktuelle Sektion: ${section.id}`);
-                        window.location = a.getAttribute("href");
+                        if (!isMobileDevice)
+                                window.location = a.getAttribute("href");
 
                         // Wenn die Sektion "projects" ist und das aktuelle Projekt 0 ist, setze den URL-Parameter auf "icons"
                         if (section.id == "projects" && curProject == 0) {
