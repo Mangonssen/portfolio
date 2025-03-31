@@ -89,6 +89,25 @@ function isElementOutOffBounds(el) {
         );
 }
 
+/**
+ * 
+ * @param {HTMLElement} el 
+ * @returns top = 0, wenn out of bound; bottom = 1, wenn out of bound; left = 0, wenn out of bound; right = 1, wenn out of bound;
+ */
+function percentageInBounds(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        const topPercentage = Math.max(0, Math.min(1, (rect.top / windowHeight)));
+        const bottomPercentage = Math.max(0, Math.min(1, ((windowHeight - rect.bottom) / windowHeight)));
+
+        const leftPercentage = Math.max(0, Math.min(1, (rect.left / windowWidth)));
+        const rightPercentage = Math.max(0, Math.min(1, ((windowWidth - rect.right) / windowWidth)));
+
+        return { top: topPercentage, bottom: bottomPercentage, left: leftPercentage, right: rightPercentage };
+}
+
 // Funktion, um die aktuell sichtbare Sektion zu bestimmen
 function checkCurrentSection() {
 
