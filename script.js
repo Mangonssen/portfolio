@@ -1,3 +1,17 @@
+function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+        console.log("Mobile device detected");
+        // Add any mobile-specific logic here
+} else {
+        console.log("Non-mobile device detected");
+        // Add any desktop-specific logic here
+}
+
+if(!isMobileDevice()) {
+
 const navIcons = document.getElementsByClassName('nav-icon');
 /**
  * @type {{a:HTMLAnchorElement,section:HTMLElement|null}[]}
@@ -125,7 +139,7 @@ const projects = [
 var curProject = 0;
 
 //PROJECT QUERY EVENT LISTENER
-window.addEventListener('scroll', projectQuery());
+carousel.addEventListener('scroll', projectQuery());
 
 function projectQuery() {
 
@@ -184,4 +198,6 @@ function closePopup() {
         for (let i = 0; i < popups.length; i++) {
                 popups[i].style.display = 'none';
         }
+}
+
 }
