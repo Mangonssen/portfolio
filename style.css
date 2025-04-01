@@ -399,9 +399,8 @@ a {
 
 .project {
 
-
-    width: 100%;
     height: 100%;
+    aspect-ratio: 1/1;
 
     scroll-snap-align: center;
 
@@ -418,6 +417,13 @@ a {
     background-position: center;
 
     box-shadow: 0 .25rem 1rem rgba(from var(--dark) r g b / .5);
+}
+
+.dummy {
+
+    aspect-ratio: .25/1;
+    visibility: hidden;
+    scroll-snap-align: unset;
 }
 
 .project video {
@@ -451,7 +457,7 @@ a {
     aspect-ratio: 5/.5;
 
 
-    background: linear-gradient(to top, #17083675, transparent);
+    background: linear-gradient(to top, #17083675, #17083635,  transparent);
     border-radius: .5em;
 
     opacity: .9;
@@ -496,10 +502,7 @@ a {
     opacity: 1;
 }
 
-.dummy {
-    visibility: hidden;
-    scroll-snap-align: unset;
-}
+
 
 .project-nav {
     display: flex;
@@ -904,10 +907,15 @@ h5 {
 
     .description-container h4 {
         margin: 0 0 1rem 1.5em;
+        font-size: var(--small-text);
     }
 
     .info {
-        margin: 0 0 1rem .5em;
+        height: .5rem;
+        aspect-ratio: 1/1;
+
+        margin: 0 0 1.05rem .2rem;
+
     }
 }
 
