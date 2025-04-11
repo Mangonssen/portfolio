@@ -61,7 +61,7 @@ function scrollNext() {
         if (curProject < projects.length) {
                 curProject++;
         }
-        projectQuery();
+        /* projectQuery(); */
         console.log(curProject);
 }
 
@@ -72,7 +72,7 @@ function scrollPrev() {
         if (curProject > 0) {
                 curProject--;
         }
-        projectQuery();
+       /*  projectQuery(); */
         console.log(curProject);
 }
 
@@ -162,12 +162,12 @@ function checkCurrentSection() {
                                 window.location = a.getAttribute("href");
 
                         // Wenn die Sektion "projects" ist und das aktuelle Projekt 0 ist, setze den URL-Parameter auf "icons"
-                        if (section.id == "projects" && curProject == 0) {
+                        /* if (section.id == "projects" && curProject == 0) {
 
                                 let url = new URL(window.location);
                                 url.searchParams.set('p', "icons");
                                 window.history.replaceState({}, '', url);
-                        }
+                        } */
                 } else {
                         section.classList.remove('active');
                         a.classList.remove('active');
@@ -195,13 +195,19 @@ const projects = [
         "icons",
         "taddle",
         "loading",
-        "printer"
+        "printer",
+        "carescope"
 ];
 
 var curProject = 0;
 
+function setCurProject(project) {
+        curProject = projects.indexOf(project);
+        console.log(curProject);
+}
+
 //PROJECT QUERY EVENT LISTENER
-carousel.addEventListener('scroll', projectQuery());
+/* carousel.addEventListener('scroll', projectQuery());
 
 function projectQuery() {
 
@@ -217,10 +223,10 @@ function projectQuery() {
         } else {
 
         }
-}
+} */
 
-const infoButtons = document.getElementsByClassName('info');
-const popups = document.getElementsByClassName('popup-container');
+/* const infoButtons = document.getElementsByClassName('info');
+
 
 document.addEventListener('click', function () {
         let isPopupVisible = Array.from(popups).some(popup => popup.style.display === 'flex');
@@ -246,7 +252,8 @@ for (let i = 0; i < infoButtons.length; i++) {
                 console.log(popups[projectIndex]);
                 popups[projectIndex].style.display = 'flex';
         });
-}
+} */
+const popups = document.getElementsByClassName('popup-container');
 
 const closeButtons = document.getElementsByClassName('pu-close');
 
@@ -254,6 +261,10 @@ for (let i = 0; i < closeButtons.length; i++) {
         closeButtons[i].addEventListener('click', function (event) {
                 closePopup();
         });
+}
+
+function openPopup() {
+        popups[curProject].style.display = 'flex';
 }
 
 function closePopup() {
