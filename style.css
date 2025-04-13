@@ -64,7 +64,7 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 
-    
+
 }
 
 html {
@@ -471,7 +471,7 @@ a {
     aspect-ratio: 5/.5;
 
 
-    background: linear-gradient(to top, #17083675, #17083635,  transparent);
+    background: linear-gradient(to top, #17083675, #17083635, transparent);
     border-radius: .5em;
 
     opacity: .9;
@@ -755,7 +755,7 @@ footer {
     align-items: start;
     justify-content: space-between;
 
-    
+
 
 }
 
@@ -820,7 +820,7 @@ hr {
 .pu-body {
     display: flex;
     flex-direction: column;
-    align-items: center;	
+    align-items: center;
     justify-content: start;
 
     width: 100%;
@@ -859,6 +859,8 @@ hr {
     width: 100%;
     margin: 1rem 0 1rem 0;
 
+
+
 }
 
 .pu-body picture img {
@@ -869,9 +871,19 @@ hr {
     object-position: top;
 }
 
-
 .pu-body p {
     text-align: justify;
+}
+
+
+
+.popup-end-spacer {
+    aspect-ratio: 1/.1;
+    width: 100%;
+}
+
+#img-loading {
+    width: 20%;
 }
 
 /*@media (width> 130ch) { 
@@ -1003,10 +1015,10 @@ h5 {
         top: 0;
 
         position: fixed;
-    
+
         justify-content: space-between;
         align-items: center;
-    
+
         flex-direction: row;
 
         border: yellow solid 1px;
@@ -1016,17 +1028,17 @@ h5 {
     #name {
         transform: translateY(-.3em);
     }
-    
+
     .nav-links {
         flex-direction: row;
         margin: 0;
         padding: 0 1rem 0 0;
-    
+
         justify-content: center;
         align-items: center;
 
         background: none;
-    
+
     }
 
     .nav-icon:hover {
@@ -1087,7 +1099,7 @@ h5 {
         margin: 0 0 1rem .5em;
         font-size: var(--small-text);
     }
-    
+
     .popup {
         padding: 1rem .5rem 0 .5rem;
         width: 90dvw;
@@ -1102,7 +1114,7 @@ h5 {
         font-size: var(--small-text);
         width: 100%;
         max-width: unset;
-        }
+    }
 
     .pu-body picture {
         width: 100%;

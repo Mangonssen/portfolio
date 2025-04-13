@@ -72,7 +72,7 @@ function scrollPrev() {
         if (curProject > 0) {
                 curProject--;
         }
-       /*  projectQuery(); */
+        /*  projectQuery(); */
         console.log(curProject);
 }
 
@@ -206,6 +206,8 @@ function setCurProject(project) {
         console.log(curProject);
 }
 
+
+
 //PROJECT QUERY EVENT LISTENER
 /* carousel.addEventListener('scroll', projectQuery());
 
@@ -273,3 +275,14 @@ function closePopup() {
         }
 }
 
+for (let i = 0; i < popups.length; i++) {
+        popups[i].addEventListener('mouseover', function (event) {
+                document.body.style.overflow = 'hidden';
+        });
+}
+
+for (let i = 0; i < popups.length; i++) {
+        popups[i].addEventListener('mouseout', function (event) {
+                document.body.style.overflow = 'auto';
+        });
+}
