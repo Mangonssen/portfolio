@@ -1021,7 +1021,6 @@ h5 {
 
         flex-direction: row;
 
-        border: yellow solid 1px;
         margin: 0;
     }
 
@@ -1055,7 +1054,6 @@ h5 {
         align-items: center;
         justify-content: center;
 
-        border: orange solid 2px;
     }
 
     .projects-container {
@@ -1072,6 +1070,7 @@ h5 {
 
     .carousel-container {
 
+        background: none;
         width: 90dvw;
         height: 50%;
     }
@@ -1118,6 +1117,25 @@ h5 {
 
     .pu-body picture {
         width: 100%;
+    }
+
+    .popup-row {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+
+        width: 100%;
+        gap: 1.5rem;
+
+    }
+
+    .popup-row.fullwidth p {
+        column-count: 1;
+    }
+
+    .popup-row.split p {
+        column-count: 1;
     }
 
 
