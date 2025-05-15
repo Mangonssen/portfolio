@@ -411,6 +411,11 @@ a {
     /* background: rgba(from var(--dark) r g b / 0.2); */
 }
 
+.carousel-container> :first-child, .carousel-container> :last-child {
+    scroll-snap-align: none;
+    box-shadow: none;
+}
+
 .carousel-container> :first-child {
     margin-inline-start: var(--gap);
 }
