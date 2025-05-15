@@ -403,18 +403,26 @@ a {
     padding: .5rem 0;
 
     display: flex;
-
-    gap: 8ch;
+    --gap: 7%;
+    gap: var(--gap);
 
     background: linear-gradient(to right, rgba(from var(--dark) r g b / 0.025), rgba(from var(--dark) r g b / 0.25), rgba(from var(--dark) r g b / 0.25), rgba(from var(--dark) r g b / 0.025));
 
     /* background: rgba(from var(--dark) r g b / 0.2); */
 }
 
+.carousel-container> :first-child {
+    margin-inline-start: var(--gap);
+}
+
+.carousel-container> :last-child {
+    margin-inline-end: var(--gap);
+}
+
 .project {
 
     height: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.5/1;
 
     scroll-snap-align: center;
 
@@ -433,15 +441,10 @@ a {
     box-shadow: 0 .25rem 1rem rgba(from var(--dark) r g b / .5);
 }
 
-.dummy {
-
-    aspect-ratio: .25/1;
-    visibility: hidden;
-    scroll-snap-align: unset;
-}
-
 .project video {
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .project video source {
@@ -449,9 +452,6 @@ a {
     width: 100%;
     object-fit: cover;
     border-radius: .5em;
-
-
-
 }
 
 .project video {
