@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Obst | UX</title>
 
-    <link rel="icon" href="./resources/favicon.png" type="image/icon" sizes="77x77">
-    <link rel="stylesheet" href="https://use.typekit.net/uwj8wlv.css">
+    <link rel="icon" href="./resources/favicon.webp" type="image/icon" sizes="77x77">
+    <link rel="stylesheet" href="https://use.typekit.net/uwj8wlv.css" fetchpriority="low">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,7 +23,8 @@
                     <li class="nav-container">
                         <a href="#welcome" class="nav-link">
                             <picture>
-                                <img class="nav-icon" src="./resources/welcome.svg" alt="nav_icon_welcome">
+                                <img loading="lazy" class="nav-icon" src="./resources/welcome.svg"
+                                    alt="nav_icon_welcome">
                             </picture>
                         </a>
                         <p class="context-menu">Welcome</p>
@@ -31,7 +32,7 @@
                     <li class="nav-container">
                         <a href="#about" class="nav-link">
                             <picture>
-                                <img class="nav-icon" src="./resources/about.svg" alt="nav_icon_about">
+                                <img loading="lazy" class="nav-icon" src="./resources/about.svg" alt="nav_icon_about">
                             </picture>
                         </a>
                         <p class="context-menu">About Me</p>
@@ -39,7 +40,8 @@
                     <li class="nav-container">
                         <a href="#projects" class="nav-link">
                             <picture>
-                                <img class="nav-icon" src="./resources/projects.svg" alt="nav_icon_projects">
+                                <img loading="lazy" class="nav-icon" src="./resources/projects.svg"
+                                    alt="nav_icon_projects">
                             </picture>
                         </a>
                         <p class="context-menu">Projects</p>
@@ -47,7 +49,8 @@
                     <li class="nav-container">
                         <a href="#contact" class="nav-link">
                             <picture>
-                                <img class="nav-icon" src="./resources/contact.svg" alt="nav_icon_contact">
+                                <img loading="lazy" class="nav-icon" src="./resources/contact.svg"
+                                    alt="nav_icon_contact">
                             </picture>
                         </a>
                         <p class="context-menu">Contact</p>
@@ -90,8 +93,8 @@
                         </div>
                     </div>
                     <div class="carousel-container" id="carousel">
-                        <div class="project" id="loading">
-                            <video playsinline loop muted autoplay>
+                        <div class="project" id="icons">
+                            <video playsinline loop muted autoplay width="1920" height="1080">
                                 <source src="./resources/video/icons.webm" type="video/mp4">
                             </video>
                             <div class="description-container">
@@ -100,7 +103,7 @@
                             </div>
                         </div>
                         <div class="project" id="taddle">
-                            <video playsinline loop muted autoplay>
+                            <video playsinline loop muted autoplay width="1920" height="1080">
                                 <source src="./resources/video/taddle.webm" type="video/mp4">
                             </video>
                             <div class="description-container">
@@ -108,7 +111,7 @@
                                 <a class="info" onclick="setCurProject('taddle'); openPopup()"></a>
                             </div>
                         </div>
-                        <div class="project" id="loading">
+                        <div class="project" id="loading" width="1000" height="1000">
                             <video playsinine loop muted autoplay>
                                 <source src="./resources/video/loading.mp4" type="video/mp4">
                             </video>
@@ -118,7 +121,7 @@
                             </div>
                         </div>
                         <div class="project" id="printer">
-                            <video playsinline loop muted autoplay>
+                            <video playsinline loop muted autoplay width="1080" height="1080">
                                 <source src="./resources/video/printer.webm" type="video/mp4">
                             </video>
                             <div class="description-container">
@@ -127,7 +130,7 @@
                             </div>
                         </div>
                         <div class="project" id="carescope">
-                            <video playsinline loop muted autoplay>
+                            <video playsinline loop muted autoplay width="1080" height="1080">
                                 <source src="./resources/video/carescope.webm" type="video/mp4">
                             </video>
                             <div class="description-container">
@@ -150,7 +153,7 @@
                     <div class="contact-content">
                         <div class="row-container contact-row">
                             <picture class="contact-icon">
-                                <img src="./resources/mail.svg" alt="MailIcon">
+                                <img loading="lazy" src="./resources/mail.svg" alt="MailIcon">
                             </picture>
                             <a href="mailto:mangonssen@gmx.net" class="contact-link">
                                 marc.obst@gmx.net
@@ -158,7 +161,7 @@
                         </div>
                         <div class="row-container contact-row">
                             <picture class="contact-icon">
-                                <img src="./resources/phone.svg" alt="PhoneIcon">
+                                <img loading="lazy" src="./resources/phone.svg" alt="PhoneIcon">
                             </picture>
                             <a href="tel:+4915128989308" class="contact-link">
                                 +49 151 28989308
@@ -188,7 +191,7 @@
 
     <div class="cursor" id="cursor">
         <picture>
-            <img src="./resources/cursor.svg" alt="">
+            <img loading="lazy" src="./resources/cursor.svg" alt="">
         </picture>
     </div>
 
@@ -200,14 +203,16 @@
             <div class="pu-head">
                 <h2>Iconsets: Nature</h2>
                 <a href="#projects" onclick="" class="pu-close">
-                    <img src="./resources/close.svg" alt="X">
+                    <img loading="lazy" src="./resources/close.svg" alt="X">
                 </a>
             </div>
             <div class="pu-programs">
                 <hr>
                 <ul class="programs">
-                    <li class="program"><img src="./resources/icons/illustrator.png" alt="" class="program-icon"></li>
-                    <li class="program"><img src="./resources/icons/aseprite.png" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/illustrator.webp" width="1240"
+                            height="1211" alt="" class="program-icon" width="1240" height="1211"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/aseprite.webp" width="5597"
+                            height="5598" alt="" class="program-icon"></li>
                 </ul>
             </div>
             <div class="pu-body">
@@ -223,7 +228,8 @@
                         that are both aesthetically pleasing and functional.</p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/pixelart.png" id="img-pixelart">
+                    <img loading="lazy" src="./resources/projects/pixelart.webp" id="img-pixelart" width="2000"
+                        height="923">
                 </picture>
                 <div class="row-container popup-row split">
                     <p>For the first set, I chose Pixel Art, a digital art style characterized by its blocky,
@@ -238,7 +244,8 @@
                         how deliberate limitations can enhance creativity.
                 </div>
                 <picture>
-                    <img src="./resources/projects/coloringbook.png" id="img-coloringbook">
+                    <img loading="lazy" src="./resources/projects/coloringbook.webp" id="img-coloringbook" width="2000"
+                        height="923">
                 </picture>
                 <div class="row-container popup-row split">
                     <p>For the second set, I shifted to a loose, scribbly drawing style, inspired by the spontaneous
@@ -267,14 +274,16 @@
             <div class="pu-head">
                 <h2>Screendesign: taddle</h2>
                 <a href="#projects" onclick="" class="pu-close">
-                    <img src="./resources/close.svg" alt="X">
+                    <img loading="lazy" src="./resources/close.svg" alt="X">
                 </a>
             </div>
             <div class="pu-programs">
                 <hr>
                 <ul class="programs">
-                    <li class="program"><img src="./resources/icons/illustrator.png" alt="" class="program-icon"></li>
-                    <li class="program"><img src="./resources/icons/figma.png" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/illustrator.webp" width="1240"
+                            height="1211" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/figma.webp" width="1024"
+                            height="1024" alt="" class="program-icon"></li>
                 </ul>
             </div>
             <div class="pu-body">
@@ -293,7 +302,8 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/taddle.png" id="img-taddle">
+                    <img loading="lazy" src="./resources/projects/taddle.webp" id="img-taddle" width="2000"
+                        height="923">
                 </picture>
                 <div class="row-container popup-row split">
                     <p> Further into detail, my focus was to ensure consitency among the UI elements. This meant that I
@@ -316,13 +326,14 @@
             <div class="pu-head">
                 <h2>Animation: Loading</h2>
                 <a href="#projects" onclick="closePopup()" class="pu-close">
-                    <img src="./resources/close.svg" alt="X">
+                    <img loading="lazy" src="./resources/close.svg" alt="X">
                 </a>
             </div>
             <div class="pu-programs">
                 <hr>
                 <ul class="programs">
-                    <li class="program"><img src="./resources/icons/aftereffects.png" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/aftereffects.webp" width="1240"
+                            height="1208" alt="" class="program-icon"></li>
                 </ul>
             </div>
             <div class="pu-body">
@@ -339,7 +350,8 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/loading.gif" id="img-loading">
+                    <img loading="lazy" src="./resources/projects/loading.gif" id="img-loading" width="1000"
+                        height="1000">
                 </picture>
             </div>
 
@@ -354,13 +366,14 @@
             <div class="pu-head">
                 <h2>Redesign: Printer UI</h2>
                 <a href="#projects" onclick="closePopup()" class="pu-close">
-                    <img src="./resources/close.svg" alt="X">
+                    <img loading="lazy" src="./resources/close.svg" alt="X">
                 </a>
             </div>
             <div class="pu-programs">
                 <hr>
                 <ul class="programs">
-                    <li class="program"><img src="./resources/icons/illustrator.png" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/illustrator.webp" width="1240"
+                            height="1211" alt="" class="program-icon"></li>
                 </ul>
             </div>
             <div class="pu-body">
@@ -376,7 +389,8 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/printerredesign1png.png" id="redesign-1">
+                    <img loading="lazy" src="./resources/projects/printerredesign1png.webp" id="redesign-1" width="2000"
+                        height="923">
                 </picture>
                 <div class="row-container popup-row split">
                     <p>In my redesign, I focused on creating a clean, modern interface that prioritized user experience
@@ -391,7 +405,8 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/printerredesign2png.png" id="redesign-2">
+                    <img loading="lazy" src="./resources/projects/printerredesign2png.webp" id="redesign-2" width="2000"
+                        height="923">
                 </picture>
                 <div class="pu-foot">
 
@@ -405,15 +420,18 @@
             <div class="pu-head">
                 <h2>App Concept: CareScope</h2>
                 <a href="#projects" onclick="closePopup()" class="pu-close">
-                    <img src="./resources/close.svg" alt="X">
+                    <img loading="lazy" src="./resources/close.svg" alt="X">
                 </a>
             </div>
             <div class="pu-programs">
                 <hr>
                 <ul class="programs">
-                    <li class="program"><img src="./resources/icons/illustrator.png" alt="" class="program-icon"></li>
-                    <li class="program"><img src="./resources/icons/figma.png" alt="" class="program-icon"></li>
-                    <li class="program"><img src="./resources/icons/aftereffects.png" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/illustrator.webp" width="1240"
+                            height="1211" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/figma.webp" width="1024"
+                            height="1024" alt="" class="program-icon"></li>
+                    <li class="program"><img loading="lazy" src="./resources/icons/aftereffects.webp" width="1240"
+                            height="1208" alt="" class="program-icon"></li>
                 </ul>
             </div>
             <div class="pu-body">
@@ -429,7 +447,8 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="./resources/projects/carescopeui.png" id="carescope-ui">
+                    <img loading="lazy" src="./resources/projects/carescopeui.webp" id="carescope-ui" width="2000"
+                        height="923">
                 </picture>
                 <div class="row-container popup-row split">
                     <p>The final concept was a companion app connected to a network of smart devices installed in the

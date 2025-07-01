@@ -36,7 +36,7 @@
     padding: 0;
 
     cursor: none;
-
+    transition-behavior: allow-discrete;
 }
 
 :root {
@@ -60,6 +60,8 @@
     --footer-text: .4rem;
 
     --transition-time: 0.3s;
+
+    --easeOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
