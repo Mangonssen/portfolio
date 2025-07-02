@@ -41,13 +41,13 @@ document.addEventListener('mousemove', function (event) {
         cursor.style.top = event.clientY + 'px';
 });
 
-const links = document.getElementsByTagName("a");
+const pointerEls = document.querySelectorAll("a,.info");
 
-for (let i = 0; i < links.length; i++) {
-        links[i].addEventListener('mouseover', function (event) {
+for (let i = 0; i < pointerEls.length; i++) {
+        pointerEls[i].addEventListener('mouseover', function (event) {
                 cursor.children[0].children[0].src = "resources/pointer.svg";
         });
-        links[i].addEventListener('mouseout', function (event) {
+        pointerEls[i].addEventListener('mouseout', function (event) {
                 cursor.children[0].children[0].src = "resources/cursor.svg";
         });
 }
