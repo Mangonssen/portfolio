@@ -63,7 +63,7 @@ function checkCurrentSection() {
             section.classList.toggle('active', active);
             a.classList.toggle('active', active);
 
-            if (active && !isMobileDevice()) {
+            if (active /*&& !isMobileDevice()*/) {
                 const href = a.getAttribute("href");
                 if (href) {
                     // URL anpassen ohne Scroll / Reload:
