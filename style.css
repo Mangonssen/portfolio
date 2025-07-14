@@ -263,10 +263,13 @@ a {
     font-size: var(--text);
 }
 
+a:has(button) {
+    margin: 0 0 1.75rem 0;
+}
+
 a button {
 
     font-size: var(--small-text);
-    margin: 0 0 1.75rem 0;
 
     text-decoration: none;
     color: var(--primary);
@@ -281,7 +284,6 @@ a button {
     letter-spacing: .25em;
 
     transition: background-color .3s ease;
-
 }
 
 a button:hover {
