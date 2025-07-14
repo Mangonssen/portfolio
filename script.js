@@ -187,6 +187,39 @@ for (let i = 0; i < popups.length; i++) {
 }
 
 /**
+ * 
+ * @param {Event} event 
+ */
+function doLightDismiss(event) {
+    if (event instanceof MouseEvent) {
+        const openPopup = [...popups]
+            .find(popup => popup.matches('[style="display: flex;"]'))
+            ?.querySelector(".popup");
+
+        if (!openPopup) {
+            return;
+        }
+        const rect = openPopup.getBoundingClientRect();
+        const clickX = event.clientX;
+        const clickY = event.clientY;
+
+        const isClickInsidePopup =
+            clickX >= rect.left &&
+            clickX <= rect.right &&
+            clickY >= rect.top &&
+            clickY <= rect.bottom;
+
+        if (!isClickInsidePopup) {
+            closePopup();
+        }
+    } else if (event instanceof KeyboardEvent) {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
+    }
+}
+
+/**
  * @param {string} project - Ein CSS-Selektor (z. B. ".class", "#id", "div > p")
  */
 function openPopup(project) {
@@ -195,6 +228,8 @@ function openPopup(project) {
         console.error(`${project} not found`);
         return;
     }
+    window.addEventListener("click", doLightDismiss);
+    window.addEventListener("keydown", doLightDismiss);
     popups[index].style.display = 'flex';
 }
 
@@ -202,6 +237,8 @@ function closePopup() {
     for (let i = 0; i < popups.length; i++) {
         popups[i].style.display = 'none';
     }
+    window.removeEventListener("click", doLightDismiss);
+    window.removeEventListener("keydown", doLightDismiss);
 }
 
 //#endregion
